@@ -4,7 +4,7 @@
    Fonts: Cormorant Garamond (headlines) · Inter (body)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400&display=swap');
 
 /* ── Reset ─────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,8 +26,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   --border:       #D9D6CE;
   --border-light: #EAE8E2;
 
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans:  'Inter', system-ui, sans-serif;
+  --font-serif:    'Cormorant Garamond', Georgia, serif;
+  --font-sans:     'Inter', system-ui, sans-serif;
+  --font-serif-zh: 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --font-sans-zh:  'Noto Sans SC', 'PingFang SC', sans-serif;
 
   --max-w: 1180px;
   --section-y: 100px;
@@ -359,20 +361,15 @@ hr.rule {
 }
 .faq-question .icon {
   flex-shrink: 0;
-  width: 24px; height: 24px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  transition: 0.25s;
+  font-size: 17px;
   color: var(--ink-3);
-  font-size: 18px;
   line-height: 1;
+  transition: transform 0.3s cubic-bezier(.25,.46,.45,.94), color 0.25s;
+  display: inline-block;
 }
 .faq-item.open .faq-question .icon {
-  background: var(--green);
-  border-color: var(--green);
-  color: var(--cream);
-  transform: rotate(45deg);
+  transform: rotate(-90deg);
+  color: var(--green);
 }
 .faq-answer {
   display: none;
@@ -571,15 +568,31 @@ hr.rule {
   padding-bottom: 80px;
   position: relative;
   overflow: hidden;
-  background: var(--cream-2);
+  background: var(--cream);
+}
+/* Grain texture overlay on hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.028;
+  pointer-events: none;
+  z-index: 0;
 }
 .hero-bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 75% 50%, rgba(27,58,45,0.07) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(27,58,45,0.04) 0%, transparent 60%);
+    radial-gradient(ellipse 75% 65% at 72% 48%, rgba(27,58,45,0.10) 0%, transparent 65%),
+    radial-gradient(ellipse 55% 55% at 15% 85%, rgba(27,58,45,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 50% at 88% 12%, rgba(210,195,165,0.18) 0%, transparent 58%),
+    radial-gradient(ellipse 65% 45% at 50% 0%,  rgba(245,240,230,0.85) 0%, transparent 68%),
+    radial-gradient(ellipse 30% 35% at 30% 30%,  rgba(27,58,45,0.03) 0%, transparent 70%);
 }
+.hero > * { position: relative; z-index: 1; }
+
 .hero-label {
   font-size: 11px;
   font-weight: 500;
@@ -640,7 +653,12 @@ hr.rule {
 .page-hero {
   padding: 88px 0 72px;
   border-bottom: 1px solid var(--border);
-  background: var(--cream-2);
+  background:
+    radial-gradient(ellipse 60% 70% at 80% 50%, rgba(27,58,45,0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 5%  90%, rgba(27,58,45,0.04) 0%, transparent 55%),
+    var(--cream-2);
+  position: relative;
+  overflow: hidden;
 }
 .page-hero .eyebrow { margin-bottom: 16px; }
 .page-hero h1 {
@@ -863,11 +881,13 @@ hr.rule {
 /* ── Scroll reveal ───────────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.75s cubic-bezier(.25,.46,.45,.94),
-              transform 0.75s cubic-bezier(.25,.46,.45,.94);
+  transform: translateY(32px);
+  filter: blur(3px);
+  transition: opacity 0.85s cubic-bezier(.25,.46,.45,.94),
+              transform 0.85s cubic-bezier(.25,.46,.45,.94),
+              filter 0.85s cubic-bezier(.25,.46,.45,.94);
 }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal.visible { opacity: 1; transform: translateY(0); filter: blur(0); }
 .reveal-d1 { transition-delay: 0.1s; }
 .reveal-d2 { transition-delay: 0.22s; }
 .reveal-d3 { transition-delay: 0.36s; }
@@ -1101,3 +1121,44 @@ body.lang-zh a.zh-text,
 body.lang-zh li.zh-text { display: inline !important; }
 body.lang-zh .zh-text.zh-flex { display: flex !important; }
 body.lang-zh .zh-text.zh-inline-block { display: inline-block !important; }
+
+/* ── Chinese premium typography ──────────────────────────── */
+body.lang-zh h1,
+body.lang-zh h2,
+body.lang-zh h3,
+body.lang-zh .hero-headline,
+body.lang-zh .section-heading,
+body.lang-zh .page-hero h1,
+body.lang-zh .callout-band h2,
+body.lang-zh .faq-question,
+body.lang-zh .step-content h4,
+body.lang-zh .pillar h3,
+body.lang-zh .value-card h3 {
+  font-family: var(--font-serif-zh);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+body.lang-zh p,
+body.lang-zh li,
+body.lang-zh .section-sub,
+body.lang-zh .eyebrow,
+body.lang-zh .label-rule span,
+body.lang-zh .badge-chip,
+body.lang-zh .comp-item-key,
+body.lang-zh .info-key,
+body.lang-zh .info-val,
+body.lang-zh .nav-links a {
+  font-family: var(--font-sans-zh);
+  letter-spacing: 0.03em;
+}
+body.lang-zh .hero-headline {
+  font-size: clamp(46px, 7.5vw, 98px);
+  line-height: 1.15;
+}
+body.lang-zh .page-hero h1 {
+  font-size: clamp(38px, 5.5vw, 68px);
+  line-height: 1.2;
+}
+/* Slightly tighter tracking for Chinese display headings */
+body.lang-zh .callout-band h2 { letter-spacing: 0.08em; }
+body.lang-zh .nav-brand { font-family: var(--font-serif); }
