@@ -30,9 +30,12 @@
   <!-- ── Page hero ─────────────────────────────────────────── -->
   <section class="page-hero">
     <div class="container">
-      <div class="eyebrow fade-up">Contact</div>
-      <h1 class="fade-up delay-1">Every journey<br>starts with a conversation.</h1>
+      <div class="eyebrow fade-up">Contact · 联系我们</div>
+      <h1 class="fade-up delay-1">Every journey<br>starts with a conversation.
+        <span class="zh">每段旅程，始于一次对话</span>
+      </h1>
       <p class="fade-up delay-2">No pressure, no commitment. Book a 30-minute call or send a message — we respond to every inquiry personally, typically within one business day.</p>
+      <p class="fade-up delay-3" style="font-size:15px; color:var(--ink-3); margin-top:10px; line-height:1.7;">无压力，无承诺。预约30分钟通话或发送消息——我们亲自回复每一条询问，通常在一个工作日内。</p>
     </div>
   </section>
 
@@ -206,11 +209,12 @@
     </div>
   </footer>
 
+  <script src="lumen.js"></script>
   <script>
     function handleSubmit(e) {
       e.preventDefault();
       const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'Message sent — we\'ll be in touch.';
+      btn.textContent = 'Message sent · 已发送 — we\'ll be in touch.';
       btn.disabled = true;
       btn.style.background = 'var(--green-muted)';
     }

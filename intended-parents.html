@@ -10,6 +10,7 @@
 </head>
 <body class="page-body">
 
+
   <!-- ── Navigation ───────────────────────────────────────── -->
   <nav class="nav">
     <div class="container">
@@ -22,7 +23,7 @@
         <li><a href="intended-parents.html" class="active">Intended Parents</a></li>
         <li><a href="surrogates.html">Surrogates</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Call</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Call · 预约咨询</a></li>
       </ul>
     </div>
   </nav>
@@ -30,9 +31,12 @@
   <!-- ── Page hero ─────────────────────────────────────────── -->
   <section class="page-hero">
     <div class="container">
-      <div class="eyebrow fade-up">For Intended Parents</div>
-      <h1 class="fade-up delay-1">Your journey,<br>clearly explained.</h1>
+      <div class="eyebrow fade-up">For Intended Parents · 委托父母</div>
+      <h1 class="fade-up delay-1">Your journey,<br>clearly explained.
+        <span class="zh">您的旅程，清晰呈现</span>
+      </h1>
       <p class="fade-up delay-2">We know the surrogacy process can feel overwhelming. This page walks you through every stage — timelines, costs, legal protection, and what to expect as an international family in California.</p>
+      <p class="fade-up delay-3" style="font-size:15px; color:var(--ink-3); margin-top:10px; line-height:1.7;">我们深知代孕过程可能令人不知所措。本页面将逐一说明每个阶段——时间线、费用、法律保障，以及作为国际家庭在加州的完整预期。</p>
     </div>
   </section>
 
@@ -41,12 +45,15 @@
   <!-- ── Process timeline ──────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="label-rule"><span>The six stages</span></div>
+      <div class="label-rule reveal"><span>The six stages · 六个阶段</span></div>
       <div class="two-col" style="gap: 80px; align-items: start;">
-        <div>
-          <div class="eyebrow">Timeline</div>
-          <h2 class="section-heading">18–24 months,<br>start to birth.</h2>
+        <div class="reveal reveal-d1">
+          <div class="eyebrow">Timeline · 时间线</div>
+          <h2 class="section-heading">18–24 months,<br>start to birth.
+            <span class="zh">从启动到分娩，18至24个月</span>
+          </h2>
           <p class="section-sub">Every journey is different, but this is the typical arc. We set honest expectations at every stage so there are no surprises.</p>
+          <p style="font-size:13px; color:var(--ink-3); margin-top:12px; line-height:1.7;">每段旅程都有其独特性，但这是典型弧线。我们在每个阶段都诚实设定预期，不留惊喜。</p>
         </div>
         <div>
           <div class="timeline">
@@ -106,8 +113,10 @@
       <div class="label-rule"><span>Understanding costs</span></div>
       <div class="two-col">
         <div>
-          <div class="eyebrow">Fee ranges</div>
-          <h2 class="section-heading">Transparent from<br>the first conversation.</h2>
+          <div class="eyebrow">Fee ranges · 费用范围</div>
+          <h2 class="section-heading">Transparent from<br>the first conversation.
+            <span class="zh">从第一次对话起，完全透明</span>
+          </h2>
           <p class="section-sub">Surrogacy in California is a significant commitment. We provide a complete, itemized estimate during your initial consultation — so you can plan with confidence from day one.</p>
           <p style="font-size: 15px; color: var(--ink-3); margin-top: 24px; line-height: 1.7;">Figures below represent typical ranges for a full-service California gestational surrogacy. Your actual costs are confirmed in writing before any agreement is signed.</p>
           <div style="margin-top: 40px; padding: 28px 32px; background: var(--green); border-radius: 2px;">
@@ -162,11 +171,14 @@
   <!-- ── International parents ─────────────────────────────── -->
   <section class="section section--green">
     <div class="container">
-      <div class="eyebrow">International families</div>
+      <div class="eyebrow reveal">International families · 国际家庭</div>
       <div class="two-col">
-        <div>
-          <h2 class="section-heading">You don't need to live in the U.S. to build your family here.</h2>
+        <div class="reveal reveal-d1">
+          <h2 class="section-heading">You don't need to live in the U.S. to build your family here.
+            <span class="zh">无需居住在美国，也可在此建立家庭</span>
+          </h2>
           <p class="section-sub">Lumen has extensive experience guiding families from mainland China, Taiwan, Hong Kong, Singapore, and other countries through California surrogacy. We provide Mandarin-language support throughout.</p>
+          <p style="font-size:13px; color:rgba(250,250,248,0.45); margin-top:14px; line-height:1.7;">Lumen 拥有丰富经验，为来自中国大陆、台湾、香港、新加坡等地的家庭提供全程普通话服务。</p>
         </div>
         <div>
           <ul class="checklist" style="margin-top: 8px;">
@@ -273,9 +285,11 @@
   <!-- ── CTA band ──────────────────────────────────────────── -->
   <div class="callout-band">
     <div class="container text-center">
-      <h2>Have more questions?</h2>
-      <p>Book a confidential call. There's no obligation — just honest answers.</p>
-      <a href="contact.html" class="btn btn-outline-light">Book a confidential call</a>
+      <h2 class="reveal">Have more questions?
+        <span class="zh">还有更多问题？</span>
+      </h2>
+      <p class="reveal reveal-d1">Book a confidential call. There's no obligation — just honest answers. · 预约保密咨询，零压力，只有真实的解答。</p>
+      <a href="contact.html" class="btn btn-outline-light reveal reveal-d2">Book a confidential call · 预约保密咨询</a>
     </div>
   </div>
 
@@ -312,12 +326,7 @@
     </div>
   </footer>
 
-  <script>
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      item.classList.toggle('open');
-    }
-  </script>
+  <script src="lumen.js"></script>
 
 </body>
 </html>

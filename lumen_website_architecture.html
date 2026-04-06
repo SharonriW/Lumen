@@ -1,0 +1,147 @@
+
+<style>
+* { box-sizing: border-box; }
+.page-node { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 14px 16px; background: var(--color-background-secondary); }
+.page-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.page-sub { font-size: 12px; color: var(--color-text-tertiary); margin-bottom: 10px; }
+.section-row { display: flex; flex-direction: column; gap: 6px; }
+.section-item { font-size: 12px; color: var(--color-text-secondary); padding: 6px 10px; border-radius: 6px; border-left: 2px solid var(--color-border-secondary); background: var(--color-background-primary); line-height: 1.5; }
+.section-item b { color: var(--color-text-primary); font-weight: 500; }
+.badge { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+.badge-must { background: #EEEDFE; color: #3C3489; }
+.badge-later { background: var(--color-background-secondary); color: var(--color-text-tertiary); border: 0.5px solid var(--color-border-secondary); }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.col-label { font-size: 11px; font-weight: 500; color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 10px; }
+.connector { text-align: center; font-size: 18px; color: var(--color-text-tertiary); margin: 4px 0; }
+.rule-box { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 12px 16px; margin-top: 6px; }
+.rule-item { font-size: 12px; color: var(--color-text-secondary); padding: 4px 0; display: flex; gap: 8px; align-items: flex-start; }
+.rule-dot { width: 5px; height: 5px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+.dot-purple { background: #534AB7; }
+.dot-gray { background: #888780; }
+.tone-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.tone-chip { font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); color: var(--color-text-secondary); }
+</style>
+
+<div style="padding: 4px 0 16px">
+
+  <!-- Header: Brand intent -->
+  <div style="margin-bottom: 20px; padding: 16px 18px; border-radius: var(--border-radius-lg); border: 0.5px solid #534AB7; background: #EEEDFE;">
+    <div style="font-size: 17px; font-weight: 500; color: #26215C; margin-bottom: 4px;">Lumen — 网站核心目的</div>
+    <div style="font-size: 13px; color: #3C3489; line-height: 1.7;">
+      不是为了获客，是为了<b>建立可信度</b>。当诊所、律所、或转介客户搜索你时，网站告诉他们：<i>这是一家认真的、专业的机构。</i>
+    </div>
+    <div class="tone-row">
+      <span class="tone-chip">极简</span>
+      <span class="tone-chip">冷静专业</span>
+      <span class="tone-chip">有温度但不煽情</span>
+      <span class="tone-chip">英文为主 中文入口</span>
+    </div>
+  </div>
+
+  <!-- Nav structure -->
+  <div class="col-label">导航结构 — 5页就够</div>
+  <div class="grid-3" style="margin-bottom: 20px;">
+
+    <div class="page-node" style="border-color: #534AB7;">
+      <div class="page-title">Home <span class="badge badge-must">核心</span></div>
+      <div class="page-sub">唯一一个需要"打动人"的页面</div>
+      <div class="section-row">
+        <div class="section-item"><b>Hero</b> — 一句定位句 + 极简视觉</div>
+        <div class="section-item"><b>我们做什么</b> — 3点，各一句话</div>
+        <div class="section-item"><b>为什么选加州</b> — 法律优势，2-3句</div>
+        <div class="section-item"><b>CTA</b> — "Book a confidential call"</div>
+      </div>
+    </div>
+
+    <div class="page-node">
+      <div class="page-title">For Intended Parents</div>
+      <div class="page-sub">给委托父母看的流程页</div>
+      <div class="section-row">
+        <div class="section-item"><b>流程概览</b> — 6步时间轴</div>
+        <div class="section-item"><b>费用说明</b> — 范围，不报精确数字</div>
+        <div class="section-item"><b>FAQ</b> — 5-8个最常见问题</div>
+        <div class="section-item"><b>国际父母说明</b> — 加州法律保护</div>
+      </div>
+    </div>
+
+    <div class="page-node">
+      <div class="page-title">For Surrogates</div>
+      <div class="page-sub">招募代孕妈妈的入口</div>
+      <div class="section-row">
+        <div class="section-item"><b>申请资格</b> — 清单式，简洁</div>
+        <div class="section-item"><b>薪酬范围</b> — $50K–$70K+</div>
+        <div class="section-item"><b>流程说明</b> — 从申请到匹配</div>
+        <div class="section-item"><b>申请按钮</b> — 接你的表单</div>
+      </div>
+    </div>
+
+    <div class="page-node">
+      <div class="page-title">About</div>
+      <div class="page-sub">建立个人信任感</div>
+      <div class="section-row">
+        <div class="section-item"><b>创始人介绍</b> — 照片+背景+动机</div>
+        <div class="section-item"><b>机构价值观</b> — 3条，各一句</div>
+        <div class="section-item"><b>合规声明</b> — 保险+托管+律师</div>
+      </div>
+    </div>
+
+    <div class="page-node">
+      <div class="page-title">Contact</div>
+      <div class="page-sub">尽量降低联系门槛</div>
+      <div class="section-row">
+        <div class="section-item"><b>预约通话</b> — Calendly嵌入</div>
+        <div class="section-item"><b>邮件</b> — hello@lumen.co</div>
+        <div class="section-item"><b>微信二维码</b> — 华人客户入口</div>
+        <div class="section-item"><b>湾区地址</b> — 哪怕是注册地址</div>
+      </div>
+    </div>
+
+    <div class="page-node" style="opacity: 0.6;">
+      <div class="page-title">Blog / Resources <span class="badge badge-later">后期</span></div>
+      <div class="page-sub">SEO内容，现在不需要</div>
+      <div class="section-row">
+        <div class="section-item">加州代孕法律科普</div>
+        <div class="section-item">流程详解文章</div>
+        <div class="section-item">客户故事（匿名）</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Hero copy direction -->
+  <div class="col-label">Hero定位句方向 — 选一个</div>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px;">
+    <div class="rule-box" style="border-color: #534AB7;">
+      <div style="font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">"Building families with clarity, care, and California law."</div>
+      <div style="font-size: 12px; color: var(--color-text-tertiary);">三个C的排比 — 专业感强，法律优势前置</div>
+    </div>
+    <div class="rule-box">
+      <div style="font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">"Your surrogacy journey, guided from first question to first breath."</div>
+      <div style="font-size: 12px; color: var(--color-text-tertiary);">情感弧线 — 从焦虑到落地，温度感强</div>
+    </div>
+    <div class="rule-box">
+      <div style="font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px;">"Where the light of new life begins."</div>
+      <div style="font-size: 12px; color: var(--color-text-tertiary);">呼应Lumen品牌名 — 诗意，适合极简视觉</div>
+    </div>
+  </div>
+
+  <!-- Design rules -->
+  <div class="col-label">视觉规则 — 给Framer/Webflow用</div>
+  <div class="grid-2">
+    <div class="rule-box">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">颜色</div>
+      <div class="rule-item"><span class="rule-dot dot-purple"></span><span>主色：接近白的米色或暖白 #FAFAF8</span></div>
+      <div class="rule-item"><span class="rule-dot dot-purple"></span><span>强调色：一个，建议深墨绿 #1B3A2D 或深靛 #1B2E4A</span></div>
+      <div class="rule-item"><span class="rule-dot dot-gray"></span><span>绝对不用：大红、金色、粉色——这是医疗机构不是月子中心</span></div>
+    </div>
+    <div class="rule-box">
+      <div style="font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px;">字体 + 图片</div>
+      <div class="rule-item"><span class="rule-dot dot-purple"></span><span>英文：Freight Display 或 Canela（衬线）做标题</span></div>
+      <div class="rule-item"><span class="rule-dot dot-purple"></span><span>正文：Inter 或 DM Sans</span></div>
+      <div class="rule-item"><span class="rule-dot dot-gray"></span><span>图片：真实感强的自然光照片，避免stock photo感</span></div>
+      <div class="rule-item"><span class="rule-dot dot-gray"></span><span>不用婴儿特写、不用大肚子照——太直白，品牌降级</span></div>
+    </div>
+  </div>
+
+</div>
