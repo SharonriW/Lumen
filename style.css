@@ -1058,3 +1058,46 @@ hr.rule {
   transition: letter-spacing 0.4s;
 }
 .comp-block:hover .comp-amount { letter-spacing: -0.02em; }
+
+/* ── Nav right group ─────────────────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── Language switcher ───────────────────────────────────── */
+.lang-toggle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border: 1px solid var(--border);
+  padding: 5px 13px;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.lang-toggle:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
+body.lang-zh .lang-toggle {
+  color: var(--green);
+  border-color: var(--green);
+  background: rgba(27,58,45,0.06);
+}
+
+/* ── Language visibility ─────────────────────────────────── */
+.zh-text { display: none !important; }
+body.lang-zh .en-text { display: none !important; }
+body.lang-zh .zh-text { display: block !important; }
+body.lang-zh span.zh-text,
+body.lang-zh a.zh-text,
+body.lang-zh li.zh-text { display: inline !important; }
+body.lang-zh .zh-text.zh-flex { display: flex !important; }
+body.lang-zh .zh-text.zh-inline-block { display: inline-block !important; }

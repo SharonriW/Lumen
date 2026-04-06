@@ -11,27 +11,28 @@
 <body class="page-body">
 
   <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
+  <nav class="nav" role="navigation">
     <div class="container">
       <a href="index.html" class="nav-brand">Lumen</a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="intended-parents.html">Intended Parents</a></li>
-        <li><a href="surrogates.html">Surrogates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Call · 预约咨询</a></li>
+        <li><a href="index.html" class="active"><span class="en-text">Home</span><span class="zh-text">首页</span></a></li>
+        <li><a href="intended-parents.html"><span class="en-text">Intended Parents</span><span class="zh-text">委托父母</span></a></li>
+        <li><a href="surrogates.html"><span class="en-text">Surrogates</span><span class="zh-text">代孕妈妈</span></a></li>
+        <li><a href="about.html"><span class="en-text">About</span><span class="zh-text">关于我们</span></a></li>
+        <li><a href="contact.html" class="nav-cta"><span class="en-text">Book a Call</span><span class="zh-text">预约咨询</span></a></li>
       </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" onclick="toggleLang()">中文</button>
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero-bg"></div>
-
-    <!-- Decorative SVG geometry -->
     <svg class="hero-deco" viewBox="0 0 600 900" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <circle cx="420" cy="320" r="280" stroke="#1B3A2D" stroke-width="0.6"/>
       <circle cx="420" cy="320" r="180" stroke="#1B3A2D" stroke-width="0.4"/>
@@ -39,26 +40,32 @@
       <line x1="140" y1="0"   x2="600" y2="460" stroke="#1B3A2D" stroke-width="0.4"/>
       <line x1="0"   y1="180" x2="600" y2="180" stroke="#1B3A2D" stroke-width="0.3"/>
       <line x1="420" y1="0"   x2="420" y2="900" stroke="#1B3A2D" stroke-width="0.3"/>
-      <path d="M 140 600 Q 420 400 600 700" stroke="#1B3A2D" stroke-width="0.5" fill="none"/>
     </svg>
-
     <div class="container" style="position:relative; z-index:1;">
       <div class="hero-label fade-up">
-        California Surrogacy Agency &nbsp;·&nbsp; 加州代孕机构
+        <span class="en-text">California Surrogacy Agency</span>
+        <span class="zh-text">加州代孕机构</span>
       </div>
       <h1 class="hero-headline fade-up delay-1">
-        Where the <em>light</em><br>of new life begins.
-        <span class="zh">新生命之光，于此启程</span>
+        <span class="en-text">Where the <em>light</em><br>of new life begins.</span>
+        <span class="zh-text">新生命之光，<br>于此启程。</span>
       </h1>
-      <p class="hero-sub fade-up delay-2">
+      <p class="hero-sub fade-up delay-2 en-text">
         Lumen guides intended parents and surrogates through every step of the surrogacy journey — with expertise, transparency, and genuine care.
+      </p>
+      <p class="hero-sub fade-up delay-2 zh-text">
+        Lumen 陪伴委托父母与代孕妈妈走过代孕旅程的每一步——以专业、透明与真诚的关怀。
       </p>
       <div class="hero-actions fade-up delay-3">
         <a href="contact.html" class="btn btn-primary">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8zm6-2.5v2.75l1.5 1.5"/></svg>
-          Book a confidential call · 预约咨询
+          <span class="en-text">Book a confidential call</span>
+          <span class="zh-text">预约保密咨询</span>
         </a>
-        <a href="intended-parents.html" class="btn btn-outline">Learn how it works · 了解流程</a>
+        <a href="intended-parents.html" class="btn btn-outline">
+          <span class="en-text">Learn how it works</span>
+          <span class="zh-text">了解流程</span>
+        </a>
       </div>
     </div>
     <div class="hero-scroll fade-up delay-4">Scroll</div>
@@ -67,42 +74,53 @@
   <!-- ── Marquee ticker ────────────────────────────────────── -->
   <div class="marquee-strip">
     <div class="marquee-inner">
-      <div class="marquee-item"><span>·</span> California Pre-Birth Order · 出生前法律认定</div>
-      <div class="marquee-item"><span>·</span> Mandarin Support · 全程普通话服务</div>
-      <div class="marquee-item"><span>·</span> Licensed Agency · 持牌代孕机构</div>
-      <div class="marquee-item"><span>·</span> Escrow Protected · 第三方托管保障</div>
-      <div class="marquee-item"><span>·</span> International Families · 服务国际家庭</div>
-      <div class="marquee-item"><span>·</span> Bay Area, California · 湾区加利福尼亚</div>
-      <div class="marquee-item"><span>·</span> Same-Sex Families Welcome · 欢迎同性家庭</div>
-      <div class="marquee-item"><span>·</span> Boutique Case Management · 精品全程服务</div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">California Pre-Birth Order</span><span class="zh-text">加州出生前法律认定</span></div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">Mandarin Support</span><span class="zh-text">全程普通话服务</span></div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">Licensed Agency</span><span class="zh-text">持牌代孕机构</span></div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">Escrow Protected</span><span class="zh-text">第三方托管保障</span></div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">International Families Welcome</span><span class="zh-text">欢迎国际家庭</span></div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">Bay Area, California</span><span class="zh-text">湾区，加利福尼亚</span></div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">Same-Sex Families Welcome</span><span class="zh-text">欢迎同性家庭</span></div>
+      <div class="marquee-item"><span>·</span> <span class="en-text">Boutique Case Management</span><span class="zh-text">精品全程服务</span></div>
     </div>
   </div>
 
   <!-- ── What we do ───────────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="label-rule reveal"><span>What Lumen does · Lumen 的服务</span></div>
+      <div class="label-rule reveal">
+        <span><span class="en-text">What Lumen does</span><span class="zh-text">Lumen 的服务</span></span>
+      </div>
       <div class="grid-3 reveal reveal-d1" style="border: 1px solid var(--border);">
 
         <div class="pillar">
           <div class="pillar-num">01</div>
-          <h3>Full-service surrogacy coordination<span class="zh" style="font-size:13px; margin-top:6px;">全流程代孕协调</span></h3>
-          <p>From surrogate matching to birth — we handle screening, legal coordination, escrow management, and clinical liaising so nothing falls through the cracks.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7;">从配对到分娩，全程专业管理，无遗漏。</p>
+          <h3>
+            <span class="en-text">Full-service surrogacy coordination</span>
+            <span class="zh-text">全流程代孕协调</span>
+          </h3>
+          <p class="en-text">From surrogate matching to birth — we handle screening, legal coordination, escrow management, and clinical liaising so nothing falls through the cracks.</p>
+          <p class="zh-text">从配对到分娩，我们负责筛查、法律协调、托管管理及临床联络，确保全程无遗漏。</p>
         </div>
 
         <div class="pillar">
           <div class="pillar-num">02</div>
-          <h3>California legal framework<span class="zh" style="font-size:13px; margin-top:6px;">加州法律框架保障</span></h3>
-          <p>California's pre-birth order process means intended parents are recognized as legal parents before the baby is born. We work exclusively in the state with the strongest surrogacy protections.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7;">出生前即可取得法定父母身份，无需收养程序。</p>
+          <h3>
+            <span class="en-text">California legal framework</span>
+            <span class="zh-text">加州法律框架保障</span>
+          </h3>
+          <p class="en-text">California's pre-birth order process means intended parents are recognized as legal parents before the baby is born. We work exclusively in the state with the strongest surrogacy protections.</p>
+          <p class="zh-text">加州出生前法令确保委托父母在孩子出生前即取得法定亲权，无需收养程序。我们专注于拥有最强代孕保护的州。</p>
         </div>
 
         <div class="pillar">
           <div class="pillar-num">03</div>
-          <h3>International parent support<span class="zh" style="font-size:13px; margin-top:6px;">国际家庭专项支持</span></h3>
-          <p>We work with families from around the world — including China, Taiwan, Hong Kong, and Southeast Asia — with bilingual guidance available in Mandarin and English.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7;">支持中国大陆、台湾、香港、新加坡等地家庭。</p>
+          <h3>
+            <span class="en-text">International parent support</span>
+            <span class="zh-text">国际家庭专项支持</span>
+          </h3>
+          <p class="en-text">We work with families from around the world — including China, Taiwan, Hong Kong, and Southeast Asia — with bilingual guidance available in Mandarin and English.</p>
+          <p class="zh-text">我们服务来自中国大陆、台湾、香港、新加坡等地的国际家庭，提供中英双语全程指导。</p>
         </div>
 
       </div>
@@ -114,28 +132,41 @@
   <!-- ── Why California ────────────────────────────────────── -->
   <section class="section section--green">
     <div class="container">
-      <div class="eyebrow reveal">Why California · 为什么选择加州</div>
+      <div class="eyebrow reveal">
+        <span class="en-text">Why California</span>
+        <span class="zh-text">为什么选择加州</span>
+      </div>
       <div class="two-col">
         <div class="reveal reveal-d1">
-          <h2 class="section-heading">The gold standard<br>for surrogacy law.
-            <span class="zh">代孕法律的黄金标准</span>
+          <h2 class="section-heading">
+            <span class="en-text">The gold standard<br>for surrogacy law.</span>
+            <span class="zh-text">代孕法律的<br>黄金标准。</span>
           </h2>
-          <p class="section-sub">California is the only U.S. state that reliably issues pre-birth orders for all family configurations — married, single, same-sex, or international. Your name is on the birth certificate from day one.</p>
-          <p style="font-size:13px; color:rgba(250,250,248,0.45); margin-top:16px; line-height:1.7;">加州是全美唯一对所有家庭结构均可发出出生前法令的州——已婚、单身、同性或国际家庭均受保护。</p>
+          <p class="section-sub en-text">California is the only U.S. state that reliably issues pre-birth orders for all family configurations — married, single, same-sex, or international. Your name is on the birth certificate from day one.</p>
+          <p class="section-sub zh-text">加州是全美唯一对所有家庭结构均可发出出生前法令的州。无论已婚、单身、同性还是国际家庭，您的姓名将从第一天起出现在出生证明上。</p>
         </div>
         <div class="reveal reveal-d2">
           <div style="display: flex; flex-direction: column; gap: 40px; padding-top: 8px;">
             <div>
-              <div class="stat-num" style="font-size: 42px; margin-bottom: 6px;">Pre-birth · 出生前</div>
-              <div class="stat-label">Legal parentage established before delivery — no adoption required. · 出生前即确立法定亲权，无需收养。</div>
+              <div class="stat-num" style="font-size: 42px; margin-bottom: 6px;">
+                <span class="en-text">Pre-birth</span><span class="zh-text">出生前认定</span>
+              </div>
+              <div class="stat-label en-text">Legal parentage established before delivery — no adoption required.</div>
+              <div class="stat-label zh-text">出生前即确立法定亲权，无需收养程序。</div>
             </div>
             <div>
-              <div class="stat-num" style="font-size: 42px; margin-bottom: 6px;">All families · 所有家庭</div>
-              <div class="stat-label">Single parents, same-sex couples, and international families protected equally. · 单亲、同性及国际家庭同等保护。</div>
+              <div class="stat-num" style="font-size: 42px; margin-bottom: 6px;">
+                <span class="en-text">All families</span><span class="zh-text">所有家庭</span>
+              </div>
+              <div class="stat-label en-text">Single parents, same-sex couples, and international families protected equally.</div>
+              <div class="stat-label zh-text">单亲、同性及国际家庭，受同等法律保护。</div>
             </div>
             <div>
-              <div class="stat-num" style="font-size: 42px; margin-bottom: 6px;">Bay Area · 湾区</div>
-              <div class="stat-label">Based in Northern California, close to world-class fertility clinics and legal counsel. · 位于北加州，紧邻顶级生殖诊所与律所。</div>
+              <div class="stat-num" style="font-size: 42px; margin-bottom: 6px;">
+                <span class="en-text">Bay Area</span><span class="zh-text">湾区</span>
+              </div>
+              <div class="stat-label en-text">Based in Northern California, close to world-class fertility clinics and legal counsel.</div>
+              <div class="stat-label zh-text">位于北加州，紧邻顶级生殖诊所与专业律所。</div>
             </div>
           </div>
         </div>
@@ -146,47 +177,59 @@
   <hr class="rule" />
 
   <!-- ── Process teaser ───────────────────────────────────── -->
-  <section class="section" style="position:relative; overflow:hidden;">
+  <section class="section">
     <div class="container">
-      <div class="label-rule reveal"><span>How it works · 流程概览</span></div>
+      <div class="label-rule reveal">
+        <span><span class="en-text">How it works</span><span class="zh-text">流程概览</span></span>
+      </div>
       <div class="two-col" style="gap: 64px;">
         <div class="reveal reveal-d1">
-          <div class="eyebrow">The journey · 旅程</div>
-          <h2 class="section-heading">Six stages,<br>guided at every step.
-            <span class="zh">六个阶段，全程陪伴</span>
+          <div class="eyebrow">
+            <span class="en-text">The journey</span><span class="zh-text">旅程</span>
+          </div>
+          <h2 class="section-heading">
+            <span class="en-text">Six stages,<br>guided at every step.</span>
+            <span class="zh-text">六个阶段，<br>全程陪伴。</span>
           </h2>
-          <p style="font-size: 16px; color: var(--ink-3); line-height: 1.75; margin-bottom: 12px;">Most surrogacy journeys take 18–24 months from initial consultation to birth. We walk alongside you from the very first question.</p>
-          <p style="font-size:13px; color:var(--ink-3); line-height:1.7; margin-bottom:36px;">代孕旅程通常需要18至24个月。从您的第一个问题开始，我们全程同行。</p>
-          <a href="intended-parents.html" class="btn btn-outline ul-link">View full process · 查看完整流程</a>
+          <p style="font-size: 16px; color: var(--ink-3); line-height: 1.75; margin-bottom: 12px;" class="en-text">Most surrogacy journeys take 18–24 months from initial consultation to birth. We walk alongside you from the very first question.</p>
+          <p style="font-size: 16px; color: var(--ink-3); line-height: 1.75; margin-bottom: 36px;" class="zh-text">大多数代孕旅程从初次咨询到分娩需要18至24个月。从您的第一个问题起，我们全程同行。</p>
+          <a href="intended-parents.html" class="btn btn-outline ul-link">
+            <span class="en-text">View full process</span>
+            <span class="zh-text">查看完整流程</span>
+          </a>
         </div>
         <div class="reveal reveal-d2">
           <div class="timeline" style="gap: 0;">
             <div class="timeline-step">
               <div class="step-num">01</div>
               <div class="step-content">
-                <h4>Initial consultation · 初次咨询</h4>
-                <p>A confidential, no-obligation call to understand your goals, timeline, and questions.</p>
+                <h4><span class="en-text">Initial consultation</span><span class="zh-text">初次咨询</span></h4>
+                <p class="en-text">A confidential, no-obligation call to understand your goals, timeline, and questions.</p>
+                <p class="zh-text">保密通话，了解您的需求、时间安排与疑问，零承诺。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">02</div>
               <div class="step-content">
-                <h4>Profile review &amp; matching · 资料审核与配对</h4>
-                <p>We present carefully screened surrogate profiles and facilitate introductions at your pace.</p>
+                <h4><span class="en-text">Profile review &amp; matching</span><span class="zh-text">资料审核与配对</span></h4>
+                <p class="en-text">We present carefully screened surrogate profiles and facilitate introductions at your pace.</p>
+                <p class="zh-text">我们提供经严格审核的代孕妈妈档案，按您的节奏推进配对。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">03</div>
               <div class="step-content">
-                <h4>Legal &amp; medical clearance · 法律与医疗审核</h4>
-                <p>Independent legal counsel for both parties. Medical screening coordinated with your IVF clinic.</p>
+                <h4><span class="en-text">Legal &amp; medical clearance</span><span class="zh-text">法律与医疗审核</span></h4>
+                <p class="en-text">Independent legal counsel for both parties. Medical screening coordinated with your IVF clinic.</p>
+                <p class="zh-text">双方独立法律顾问，医疗筛查与您的IVF诊所协调配合。</p>
               </div>
             </div>
             <div class="timeline-step" style="border-bottom: none;">
               <div class="step-num">→</div>
               <div class="step-content">
-                <h4>And three more stages… · 以及三个更多阶段</h4>
-                <p>Transfer, pregnancy support, and birth planning — all covered. · 移植、妊娠支持、分娩规划，全程覆盖。</p>
+                <h4><span class="en-text">And three more stages…</span><span class="zh-text">以及三个更多阶段……</span></h4>
+                <p class="en-text">Transfer, pregnancy support, and birth planning — all covered.</p>
+                <p class="zh-text">移植、妊娠支持、分娩规划，全程覆盖。</p>
               </div>
             </div>
           </div>
@@ -198,11 +241,16 @@
   <!-- ── CTA band ──────────────────────────────────────────── -->
   <div class="callout-band">
     <div class="container text-center">
-      <h2 class="reveal">Ready to take the first step?
-        <span class="zh">准备好迈出第一步了吗？</span>
+      <h2 class="reveal">
+        <span class="en-text">Ready to take the first step?</span>
+        <span class="zh-text">准备好迈出第一步了吗？</span>
       </h2>
-      <p class="reveal reveal-d1">A confidential 30-minute call costs nothing. Ask anything. · 30分钟保密咨询，零费用，畅所欲言。</p>
-      <a href="contact.html" class="btn btn-outline-light reveal reveal-d2">Book a confidential call · 预约保密咨询</a>
+      <p class="reveal reveal-d1 en-text">A confidential 30-minute call costs nothing. Ask anything.</p>
+      <p class="reveal reveal-d1 zh-text">30分钟保密咨询，零费用，畅所欲言。</p>
+      <a href="contact.html" class="btn btn-outline-light reveal reveal-d2">
+        <span class="en-text">Book a confidential call</span>
+        <span class="zh-text">预约保密咨询</span>
+      </a>
     </div>
   </div>
 
@@ -212,29 +260,31 @@
       <div class="footer-inner">
         <div>
           <div class="footer-brand">Lumen</div>
-          <div class="footer-tagline">Building families with clarity, care, and California law.<br>以清晰、关怀与加州法律，守护每个家庭的诞生。</div>
+          <div class="footer-tagline en-text">Building families with clarity, care, and California law.</div>
+          <div class="footer-tagline zh-text">以清晰、关怀与加州法律，守护每个家庭的诞生。</div>
         </div>
         <div class="footer-col">
-          <h4>Navigate · 导航</h4>
+          <h4><span class="en-text">Navigate</span><span class="zh-text">导航</span></h4>
           <ul>
-            <li><a href="intended-parents.html" class="ul-link">For Intended Parents · 委托父母</a></li>
-            <li><a href="surrogates.html" class="ul-link">For Surrogates · 代孕妈妈</a></li>
-            <li><a href="about.html" class="ul-link">About · 关于我们</a></li>
-            <li><a href="contact.html" class="ul-link">Contact · 联系我们</a></li>
+            <li><a href="intended-parents.html" class="ul-link"><span class="en-text">For Intended Parents</span><span class="zh-text">委托父母</span></a></li>
+            <li><a href="surrogates.html" class="ul-link"><span class="en-text">For Surrogates</span><span class="zh-text">代孕妈妈</span></a></li>
+            <li><a href="about.html" class="ul-link"><span class="en-text">About</span><span class="zh-text">关于我们</span></a></li>
+            <li><a href="contact.html" class="ul-link"><span class="en-text">Contact</span><span class="zh-text">联系我们</span></a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact · 联系</h4>
+          <h4><span class="en-text">Contact</span><span class="zh-text">联系</span></h4>
           <ul>
             <li><a href="mailto:hello@lumensurrogacy.com" class="ul-link">hello@lumensurrogacy.com</a></li>
-            <li><a href="contact.html" class="ul-link">Book a call · 预约通话</a></li>
+            <li><a href="contact.html" class="ul-link"><span class="en-text">Book a call</span><span class="zh-text">预约通话</span></a></li>
             <li><a href="contact.html" class="ul-link">WeChat · 微信</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Lumen Surrogacy. All rights reserved.</span>
-        <span>Bay Area, California · Licensed &amp; Insured · 持牌运营</span>
+        <span class="en-text">© 2025 Lumen Surrogacy. All rights reserved.</span>
+        <span class="zh-text">© 2025 Lumen Surrogacy 版权所有</span>
+        <span><span class="en-text">Bay Area, California · Licensed &amp; Insured</span><span class="zh-text">加州湾区 · 持牌运营</span></span>
       </div>
     </div>
   </footer>

@@ -11,31 +11,35 @@
 <body class="page-body">
 
   <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav class="nav">
+  <nav class="nav" role="navigation">
     <div class="container">
       <a href="index.html" class="nav-brand">Lumen</a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="intended-parents.html">Intended Parents</a></li>
-        <li><a href="surrogates.html">Surrogates</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Call · 预约咨询</a></li>
+        <li><a href="index.html"><span class="en-text">Home</span><span class="zh-text">首页</span></a></li>
+        <li><a href="intended-parents.html"><span class="en-text">Intended Parents</span><span class="zh-text">委托父母</span></a></li>
+        <li><a href="surrogates.html"><span class="en-text">Surrogates</span><span class="zh-text">代孕妈妈</span></a></li>
+        <li><a href="about.html" class="active"><span class="en-text">About</span><span class="zh-text">关于我们</span></a></li>
+        <li><a href="contact.html" class="nav-cta"><span class="en-text">Book a Call</span><span class="zh-text">预约咨询</span></a></li>
       </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" onclick="toggleLang()">中文</button>
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ── Page hero ─────────────────────────────────────────── -->
   <section class="page-hero">
     <div class="container">
-      <div class="eyebrow fade-up">About Lumen · 关于我们</div>
-      <h1 class="fade-up delay-1">Built on the belief<br>that clarity is kindness.
-        <span class="zh">我们相信：清晰，即是善意</span>
+      <div class="eyebrow fade-up"><span class="en-text">About Lumen</span><span class="zh-text">关于我们</span></div>
+      <h1 class="fade-up delay-1">
+        <span class="en-text">Built on the belief<br>that clarity is kindness.</span>
+        <span class="zh-text">我们相信：清晰，即是善意。</span>
       </h1>
-      <p class="fade-up delay-2">Surrogacy is one of the most significant decisions a family will ever make. Lumen exists to make that process honest, supported, and legally sound — from the first question to the last form.</p>
-      <p class="fade-up delay-3" style="font-size:15px; color:var(--ink-3); margin-top:10px; line-height:1.7;">代孕是家庭最重要的决定之一。Lumen 的使命，是让这一过程诚实、有支撑、且在法律上无懈可击——从第一个问题到最后一份文件。</p>
+      <p class="en-text fade-up delay-2">Surrogacy is one of the most significant decisions a family will ever make. Lumen exists to make that process honest, supported, and legally sound — from the first question to the last form.</p>
+      <p class="zh-text fade-up delay-2">代孕是家庭最重要的决定之一。Lumen 的使命，是让这一过程诚实、有支撑、且在法律上无懈可击——从第一个问题到最后一份文件。</p>
     </div>
   </section>
 
@@ -46,26 +50,35 @@
   <!-- ── Values ────────────────────────────────────────────── -->
   <section class="section section--cream-2">
     <div class="container">
-      <div class="label-rule reveal"><span>Our values · 我们的价值观</span></div>
-      <div class="eyebrow mb-32 reveal reveal-d1" style="margin-bottom: 48px;">Three principles that guide every decision. · 三项原则，指引每一个决定。</div>
+      <div class="label-rule reveal"><span><span class="en-text">Our values</span><span class="zh-text">我们的价值观</span></span></div>
+      <div class="eyebrow mb-32 reveal reveal-d1" style="margin-bottom: 48px;"><span class="en-text">Three principles that guide every decision.</span><span class="zh-text">三项原则，指引每一个决定。</span></div>
       <div class="value-grid">
         <div class="value-card reveal">
-          <div class="value-num">01 — Transparency · 透明</div>
-          <h3>No surprises.<br>Ever.<span class="zh" style="font-size:13px; margin-top:6px;">永远不留惊喜</span></h3>
-          <p>Every cost, every timeline, every possible complication — we tell you upfront. Clarity is not a feature, it is the foundation of trust.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7;">每项费用、每个时间节点、每种可能的并发症——我们提前告知。清晰不是附加功能，而是信任的基础。</p>
+          <div class="value-num"><span class="en-text">01 — Transparency</span><span class="zh-text">01 — 透明</span></div>
+          <h3>
+            <span class="en-text">No surprises.<br>Ever.</span>
+            <span class="zh-text">永不留惊喜。</span>
+          </h3>
+          <p class="en-text">Every cost, every timeline, every possible complication — we tell you upfront. Clarity is not a feature, it is the foundation of trust. We would rather give you an uncomfortable truth early than a comfortable uncertainty that lingers.</p>
+          <p class="zh-text">每项费用、每个时间节点、每种可能的并发症——我们提前告知。清晰不是附加功能，而是信任的基础。我们宁愿早给您一个让人不舒服的真相，也不愿让您在不确定中迟迟等待。</p>
         </div>
         <div class="value-card reveal reveal-d1">
-          <div class="value-num">02 — Respect · 尊重</div>
-          <h3>Surrogates are<br>partners, not vessels.<span class="zh" style="font-size:13px; margin-top:6px;">代孕妈妈是伙伴，不是工具</span></h3>
-          <p>We hold surrogates to high standards because we hold them in high regard. Their health, autonomy, and wellbeing are never subordinated to the intended parents' timeline.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7;">我们对代孕妈妈要求严格，正因为我们极度尊重她们。她们的健康与自主权永远不会屈从于委托方的时间表。</p>
+          <div class="value-num"><span class="en-text">02 — Respect</span><span class="zh-text">02 — 尊重</span></div>
+          <h3>
+            <span class="en-text">Surrogates are<br>partners, not vessels.</span>
+            <span class="zh-text">代孕妈妈是伙伴，不是工具。</span>
+          </h3>
+          <p class="en-text">We hold surrogates to high standards because we hold them in high regard. Their health, autonomy, and wellbeing are never subordinated to the intended parents' timeline. A true match means both parties feel genuinely seen.</p>
+          <p class="zh-text">我们对代孕妈妈要求严格，正因为我们极度尊重她们。她们的健康、自主权与幸福感永远不会屈从于委托父母的时间表。真正的配对意味着双方都感到被真诚看见。</p>
         </div>
         <div class="value-card reveal reveal-d2">
-          <div class="value-num">03 — Rigor · 严谨</div>
-          <h3>Thorough process.<br>Protected outcomes.<span class="zh" style="font-size:13px; margin-top:6px;">严谨流程，保障结果</span></h3>
-          <p>We work with experienced reproductive attorneys, licensed clinical psychologists, and established IVF centers. Shortcuts don't exist here.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:10px; line-height:1.7;">我们与经验丰富的生殖律师、持牌心理医生及知名IVF诊所合作。我们不走捷径——严谨的流程是可靠结果的保证。</p>
+          <div class="value-num"><span class="en-text">03 — Rigor</span><span class="zh-text">03 — 严谨</span></div>
+          <h3>
+            <span class="en-text">Thorough process.<br>Protected outcomes.</span>
+            <span class="zh-text">严谨流程，保障结果。</span>
+          </h3>
+          <p class="en-text">We work with experienced reproductive attorneys, licensed clinical psychologists, and established IVF centers. Shortcuts don't exist here. A rigorous process is the guarantee of a reliable outcome.</p>
+          <p class="zh-text">我们与经验丰富的生殖律师、持牌临床心理医生及顶级IVF中心合作。这里不存在捷径。严谨的流程是可靠结果的保证。</p>
         </div>
       </div>
     </div>
@@ -76,49 +89,53 @@
   <!-- ── Compliance ────────────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="label-rule"><span>Compliance &amp; credentials</span></div>
+      <div class="label-rule"><span><span class="en-text">Compliance &amp; credentials</span><span class="zh-text">合规与资质</span></span></div>
       <div class="two-col">
         <div>
-          <div class="eyebrow">Legal &amp; professional standards</div>
-          <h2 class="section-heading">Every safeguard,<br>in place.</h2>
-          <p class="section-sub">Lumen operates within California's established legal and ethical framework for third-party reproduction. We hold ourselves to standards that go beyond what is required.</p>
+          <div class="eyebrow"><span class="en-text">Legal &amp; professional standards</span><span class="zh-text">法律与专业标准</span></div>
+          <h2 class="section-heading">
+            <span class="en-text">Every safeguard,<br>in place.</span>
+            <span class="zh-text">每项保障，悉数到位。</span>
+          </h2>
+          <p class="section-sub en-text">Lumen operates within California's established legal and ethical framework for third-party reproduction. We hold ourselves to standards that go beyond what is required.</p>
+          <p class="section-sub zh-text">Lumen 在加州第三方生育的既定法律与道德框架内运营。我们对自己的要求超出法规所需。</p>
         </div>
         <div>
           <div class="info-list">
             <div class="info-item">
-              <span class="info-key">Legal representation</span>
-              <span class="info-val">Independent attorneys for all parties</span>
+              <span class="info-key"><span class="en-text">Legal representation</span><span class="zh-text">法律代理</span></span>
+              <span class="info-val"><span class="en-text">Independent attorneys for all parties</span><span class="zh-text">各方独立律师代理</span></span>
             </div>
             <div class="info-item">
-              <span class="info-key">Escrow management</span>
-              <span class="info-val">Third-party trust account, licensed escrow agency</span>
+              <span class="info-key"><span class="en-text">Escrow management</span><span class="zh-text">托管管理</span></span>
+              <span class="info-val"><span class="en-text">Third-party trust account, licensed escrow agency</span><span class="zh-text">第三方信托账户，持牌托管机构</span></span>
             </div>
             <div class="info-item">
-              <span class="info-key">Insurance</span>
-              <span class="info-val">Surrogate life &amp; health insurance provided</span>
+              <span class="info-key"><span class="en-text">Insurance</span><span class="zh-text">保险</span></span>
+              <span class="info-val"><span class="en-text">Surrogate life &amp; health insurance provided</span><span class="zh-text">提供代孕妈妈人寿及健康保险</span></span>
             </div>
             <div class="info-item">
-              <span class="info-key">Psychological screening</span>
-              <span class="info-val">Licensed clinical psychologist, IVF-specialist</span>
+              <span class="info-key"><span class="en-text">Psychological screening</span><span class="zh-text">心理筛查</span></span>
+              <span class="info-val"><span class="en-text">Licensed clinical psychologist, IVF-specialist</span><span class="zh-text">持牌临床心理医生，IVF专项</span></span>
             </div>
             <div class="info-item">
-              <span class="info-key">Background checks</span>
-              <span class="info-val">All surrogates: full criminal &amp; financial background</span>
+              <span class="info-key"><span class="en-text">Background checks</span><span class="zh-text">背景调查</span></span>
+              <span class="info-val"><span class="en-text">All surrogates: full criminal &amp; financial background</span><span class="zh-text">所有代孕妈妈：完整犯罪与财务背景调查</span></span>
             </div>
             <div class="info-item">
-              <span class="info-key">Medical screening</span>
-              <span class="info-val">ASRM-guideline compliant fertility clinic evaluation</span>
+              <span class="info-key"><span class="en-text">Medical screening</span><span class="zh-text">医疗筛查</span></span>
+              <span class="info-val"><span class="en-text">ASRM-guideline compliant fertility clinic evaluation</span><span class="zh-text">符合ASRM指南的生殖诊所评估</span></span>
             </div>
             <div class="info-item">
-              <span class="info-key">California license</span>
-              <span class="info-val">State-registered agency, Bay Area, CA</span>
+              <span class="info-key"><span class="en-text">California license</span><span class="zh-text">加州许可证</span></span>
+              <span class="info-val"><span class="en-text">State-registered agency, Bay Area, CA</span><span class="zh-text">州注册机构，加州湾区</span></span>
             </div>
           </div>
           <div class="badge-row mt-32">
-            <span class="badge-chip">Licensed Agency</span>
-            <span class="badge-chip">Escrow Protected</span>
-            <span class="badge-chip">ASRM Standards</span>
-            <span class="badge-chip">Independent Counsel</span>
+            <span class="badge-chip"><span class="en-text">Licensed Agency</span><span class="zh-text">持牌机构</span></span>
+            <span class="badge-chip"><span class="en-text">Escrow Protected</span><span class="zh-text">托管保护</span></span>
+            <span class="badge-chip"><span class="en-text">ASRM Standards</span><span class="zh-text">ASRM标准</span></span>
+            <span class="badge-chip"><span class="en-text">Independent Counsel</span><span class="zh-text">独立法律顾问</span></span>
           </div>
         </div>
       </div>
@@ -128,11 +145,16 @@
   <!-- ── CTA band ──────────────────────────────────────────── -->
   <div class="callout-band">
     <div class="container text-center">
-      <h2 class="reveal">Let's talk.
-        <span class="zh">让我们谈谈</span>
+      <h2 class="reveal">
+        <span class="en-text">Let's talk.</span>
+        <span class="zh-text">让我们谈谈。</span>
       </h2>
-      <p class="reveal reveal-d1">A 30-minute call is where every journey begins. No pressure. No obligation. · 30分钟通话，开启每段旅程。零压力，零承诺。</p>
-      <a href="contact.html" class="btn btn-outline-light reveal reveal-d2">Book a confidential call · 预约保密咨询</a>
+      <p class="reveal reveal-d1 en-text">A 30-minute call is where every journey begins. No pressure. No obligation.</p>
+      <p class="reveal reveal-d1 zh-text">30分钟通话，开启每段旅程。零压力，零承诺。</p>
+      <a href="contact.html" class="btn btn-outline-light reveal reveal-d2">
+        <span class="en-text">Book a confidential call</span>
+        <span class="zh-text">预约保密咨询</span>
+      </a>
     </div>
   </div>
 

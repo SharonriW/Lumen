@@ -3,7 +3,29 @@
    Custom cursor · Scroll reveal · Progress bar · Nav · FAQ
    ============================================================ */
 
+/* ── Language toggle (global, runs before DOM ready) ─────── */
+window.toggleLang = function () {
+  const isZh = document.body.classList.toggle('lang-zh');
+  document.querySelectorAll('.lang-toggle').forEach(b => {
+    b.textContent = isZh ? 'EN' : '中文';
+  });
+  localStorage.setItem('lumen-lang', isZh ? 'zh' : 'en');
+};
+// Restore saved language immediately to avoid flash
+(function () {
+  if (localStorage.getItem('lumen-lang') === 'zh') {
+    document.documentElement.classList.add('lang-zh-pending');
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  /* ── Restore language preference ──────────────────────── */
+  if (localStorage.getItem('lumen-lang') === 'zh') {
+    document.body.classList.add('lang-zh');
+    document.documentElement.classList.remove('lang-zh-pending');
+    document.querySelectorAll('.lang-toggle').forEach(b => b.textContent = 'EN');
+  }
 
   /* ── Custom cursor ──────────────────────────────────────── */
   const dot  = document.createElement('div');

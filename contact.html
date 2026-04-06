@@ -11,31 +11,35 @@
 <body class="page-body">
 
   <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav class="nav">
+  <nav class="nav" role="navigation">
     <div class="container">
       <a href="index.html" class="nav-brand">Lumen</a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="intended-parents.html">Intended Parents</a></li>
-        <li><a href="surrogates.html">Surrogates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta active">Book a Call</a></li>
+        <li><a href="index.html"><span class="en-text">Home</span><span class="zh-text">首页</span></a></li>
+        <li><a href="intended-parents.html"><span class="en-text">Intended Parents</span><span class="zh-text">委托父母</span></a></li>
+        <li><a href="surrogates.html"><span class="en-text">Surrogates</span><span class="zh-text">代孕妈妈</span></a></li>
+        <li><a href="about.html"><span class="en-text">About</span><span class="zh-text">关于我们</span></a></li>
+        <li><a href="contact.html" class="nav-cta active"><span class="en-text">Book a Call</span><span class="zh-text">预约咨询</span></a></li>
       </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" onclick="toggleLang()">中文</button>
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ── Page hero ─────────────────────────────────────────── -->
   <section class="page-hero">
     <div class="container">
-      <div class="eyebrow fade-up">Contact · 联系我们</div>
-      <h1 class="fade-up delay-1">Every journey<br>starts with a conversation.
-        <span class="zh">每段旅程，始于一次对话</span>
+      <div class="eyebrow fade-up"><span class="en-text">Contact</span><span class="zh-text">联系我们</span></div>
+      <h1 class="fade-up delay-1">
+        <span class="en-text">Every journey<br>starts with a conversation.</span>
+        <span class="zh-text">每段旅程，始于一次对话。</span>
       </h1>
-      <p class="fade-up delay-2">No pressure, no commitment. Book a 30-minute call or send a message — we respond to every inquiry personally, typically within one business day.</p>
-      <p class="fade-up delay-3" style="font-size:15px; color:var(--ink-3); margin-top:10px; line-height:1.7;">无压力，无承诺。预约30分钟通话或发送消息——我们亲自回复每一条询问，通常在一个工作日内。</p>
+      <p class="en-text fade-up delay-2">No pressure, no commitment. Book a 30-minute call or send a message — we respond to every inquiry personally, typically within one business day.</p>
+      <p class="zh-text fade-up delay-2">无压力，无承诺。预约30分钟通话或发送消息——我们亲自回复每一条询问，通常在一个工作日内。</p>
     </div>
   </section>
 
@@ -48,7 +52,7 @@
 
         <!-- Left: Calendly + form -->
         <div>
-          <div class="label-rule" style="margin-bottom: 36px;"><span>Schedule a call</span></div>
+          <div class="label-rule" style="margin-bottom: 36px;"><span><span class="en-text">Schedule a call</span><span class="zh-text">预约通话</span></span></div>
 
           <!-- Calendly inline embed — replace data-url with your actual Calendly link -->
           <div
@@ -67,7 +71,7 @@
           </noscript>
 
           <div style="margin-top: 40px;">
-            <div class="label-rule" style="margin-bottom: 28px;"><span>Or send a message</span></div>
+            <div class="label-rule" style="margin-bottom: 28px;"><span><span class="en-text">Or send a message</span><span class="zh-text">或发送消息</span></span></div>
             <form
               name="contact"
               method="POST"
@@ -75,15 +79,15 @@
               onsubmit="handleSubmit(event)"
             >
               <div class="form-group">
-                <label for="name">Your name</label>
+                <label for="name"><span class="en-text">Your name</span><span class="zh-text">您的姓名</span></label>
                 <input type="text" id="name" name="name" placeholder="Full name" required />
               </div>
               <div class="form-group">
-                <label for="email">Email address</label>
+                <label for="email"><span class="en-text">Email address</span><span class="zh-text">电子邮件</span></label>
                 <input type="email" id="email" name="email" placeholder="your@email.com" required />
               </div>
               <div class="form-group">
-                <label for="role">I am a…</label>
+                <label for="role"><span class="en-text">I am a…</span><span class="zh-text">我是……</span></label>
                 <select id="role" name="role">
                   <option value="">Select one</option>
                   <option value="intended-parent">Intended parent (domestic)</option>
@@ -94,14 +98,28 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Tell us a little about your situation or what questions you have…"></textarea>
+                <label for="message"><span class="en-text">Message</span><span class="zh-text">留言</span></label>
+                <textarea id="message" name="message"><!-- placeholder handled via JS for bilingual --></textarea>
+                <script>
+                  (function() {
+                    var ta = document.getElementById('message');
+                    function setPlaceholder() {
+                      ta.placeholder = document.body.classList.contains('lang-zh')
+                        ? '请简述您的情况或您想了解的问题……'
+                        : 'Tell us a little about your situation or what questions you have…';
+                    }
+                    setPlaceholder();
+                    document.addEventListener('langchange', setPlaceholder);
+                  })();
+                </script>
               </div>
               <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                Send message
+                <span class="en-text">Send message</span>
+                <span class="zh-text">发送消息</span>
               </button>
               <p style="font-size: 12px; color: var(--ink-3); margin-top: 12px; text-align: center; line-height: 1.6;">
-                All inquiries are kept strictly confidential.
+                <span class="en-text">All inquiries are kept strictly confidential.</span>
+                <span class="zh-text">所有咨询信息严格保密。</span>
               </p>
             </form>
           </div>
@@ -109,29 +127,38 @@
 
         <!-- Right: contact info -->
         <div>
-          <div class="label-rule" style="margin-bottom: 36px;"><span>Reach us directly</span></div>
+          <div class="label-rule" style="margin-bottom: 36px;"><span><span class="en-text">Reach us directly</span><span class="zh-text">直接联系我们</span></span></div>
 
           <div class="contact-info">
 
             <div class="contact-item">
-              <h4>Email</h4>
+              <h4><span class="en-text">Email</span><span class="zh-text">电子邮件</span></h4>
               <a href="mailto:hello@lumensurrogacy.com">hello@lumensurrogacy.com</a>
             </div>
 
             <div class="contact-item">
-              <h4>Phone</h4>
+              <h4><span class="en-text">Phone</span><span class="zh-text">电话</span></h4>
               <a href="tel:+14155550000">+1 (415) 555-0000</a>
-              <p style="font-size: 13px; color: var(--ink-3); margin-top: 6px; font-family: var(--font-sans);">Monday – Friday, 9am – 6pm PT</p>
+              <p style="font-size: 13px; color: var(--ink-3); margin-top: 6px; font-family: var(--font-sans);">
+                <span class="en-text">Monday – Friday, 9am – 6pm PT</span>
+                <span class="zh-text">周一至周五，太平洋时间上午9点至下午6点</span>
+              </p>
             </div>
 
             <div class="contact-item">
-              <h4>Office address</h4>
-              <p>Bay Area, California<br>Full address provided upon scheduling</p>
+              <h4><span class="en-text">Office address</span><span class="zh-text">办公地址</span></h4>
+              <p>
+                <span class="en-text">Bay Area, California<br>Full address provided upon scheduling</span>
+                <span class="zh-text">加州湾区<br>预约后提供完整地址</span>
+              </p>
             </div>
 
             <div class="contact-item">
-              <h4>WeChat — 微信</h4>
-              <p style="font-size: 15px; font-family: var(--font-sans); color: var(--ink-3); margin-bottom: 16px; line-height: 1.6;">For Chinese-speaking clients, we are available on WeChat for day-to-day communication.</p>
+              <h4><span class="en-text">WeChat — 微信</span><span class="zh-text">微信 — WeChat</span></h4>
+              <p style="font-size: 15px; font-family: var(--font-sans); color: var(--ink-3); margin-bottom: 16px; line-height: 1.6;">
+                <span class="en-text">For Chinese-speaking clients, we are available on WeChat for day-to-day communication.</span>
+                <span class="zh-text">我们为中文客户提供微信日常沟通服务。</span>
+              </p>
               <!-- WeChat QR code placeholder — replace src with your actual QR image -->
               <div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
                 <div class="wechat-qr">
@@ -139,7 +166,10 @@
                 </div>
                 <div style="padding-top: 8px;">
                   <div style="font-family: var(--font-serif); font-size: 19px; color: var(--ink); margin-bottom: 4px;">微信号</div>
-                  <div style="font-size: 14px; color: var(--ink-3);">Scan to add Lumen on WeChat</div>
+                  <div style="font-size: 14px; color: var(--ink-3);">
+                    <span class="en-text">Scan to add Lumen on WeChat</span>
+                    <span class="zh-text">扫码添加 Lumen 微信</span>
+                  </div>
                   <div style="font-size: 13px; color: var(--ink-3); margin-top: 8px;">支持普通话交流</div>
                 </div>
               </div>
@@ -167,7 +197,8 @@
           <!-- Compliance note -->
           <div style="margin-top: 24px; padding: 24px 28px; border-left: 2px solid var(--green); background: var(--cream-2); border-radius: 0 2px 2px 0;">
             <p style="font-size: 13px; color: var(--ink-3); line-height: 1.7;">
-              <strong style="color: var(--ink);">Confidentiality notice:</strong> All inquiries to Lumen are handled with strict confidentiality. We do not share client information with any third parties without explicit written consent. Initial consultations carry no obligation to proceed.
+              <span class="en-text"><strong style="color: var(--ink);">Confidentiality notice:</strong> All inquiries to Lumen are handled with strict confidentiality. We do not share client information with any third parties without explicit written consent. Initial consultations carry no obligation to proceed.</span>
+              <span class="zh-text"><strong style="color: var(--ink);">保密声明：</strong>所有发送至Lumen的咨询均严格保密。未经明确书面同意，我们不会与任何第三方共享客户信息。初次咨询无需承诺继续合作。</span>
             </p>
           </div>
 
@@ -213,8 +244,9 @@
   <script>
     function handleSubmit(e) {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'Message sent · 已发送 — we\'ll be in touch.';
+      var btn = e.target.querySelector('button[type="submit"]');
+      var isZh = document.body.classList.contains('lang-zh');
+      btn.textContent = isZh ? '已发送——我们将尽快回复。' : 'Message sent — we\'ll be in touch.';
       btn.disabled = true;
       btn.style.background = 'var(--green-muted)';
     }

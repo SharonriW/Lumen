@@ -47,7 +47,8 @@
       "WebFetch(domain:www.enterreverse.com)",
       "WebSearch",
       "Bash(git -C /Users/wangsharonri/Desktop/lumen add -A)",
-      "Bash(git -C /Users/wangsharonri/Desktop/lumen commit -m \"Add bilingual EN/ZH content, custom cursor, scroll reveal, marquee, hero geometry, card hover effects\")"
+      "Bash(git -C /Users/wangsharonri/Desktop/lumen commit -m \"Add bilingual EN/ZH content, custom cursor, scroll reveal, marquee, hero geometry, card hover effects\")",
+      "Bash(git -C /Users/wangsharonri/Desktop/lumen commit -m \"Add EN/ZH language toggle — clean switch, preference saved, all 5 pages\")"
     ]
   }
 }

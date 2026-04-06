@@ -10,33 +10,36 @@
 </head>
 <body class="page-body">
 
-
   <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav class="nav">
+  <nav class="nav" role="navigation">
     <div class="container">
       <a href="index.html" class="nav-brand">Lumen</a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="intended-parents.html" class="active">Intended Parents</a></li>
-        <li><a href="surrogates.html">Surrogates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Call · 预约咨询</a></li>
+        <li><a href="index.html"><span class="en-text">Home</span><span class="zh-text">首页</span></a></li>
+        <li><a href="intended-parents.html" class="active"><span class="en-text">Intended Parents</span><span class="zh-text">委托父母</span></a></li>
+        <li><a href="surrogates.html"><span class="en-text">Surrogates</span><span class="zh-text">代孕妈妈</span></a></li>
+        <li><a href="about.html"><span class="en-text">About</span><span class="zh-text">关于我们</span></a></li>
+        <li><a href="contact.html" class="nav-cta"><span class="en-text">Book a Call</span><span class="zh-text">预约咨询</span></a></li>
       </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" onclick="toggleLang()">中文</button>
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ── Page hero ─────────────────────────────────────────── -->
   <section class="page-hero">
     <div class="container">
-      <div class="eyebrow fade-up">For Intended Parents · 委托父母</div>
-      <h1 class="fade-up delay-1">Your journey,<br>clearly explained.
-        <span class="zh">您的旅程，清晰呈现</span>
+      <div class="eyebrow fade-up"><span class="en-text">For Intended Parents</span><span class="zh-text">委托父母</span></div>
+      <h1 class="fade-up delay-1">
+        <span class="en-text">Your journey,<br>clearly explained.</span>
+        <span class="zh-text">您的旅程，清晰呈现</span>
       </h1>
-      <p class="fade-up delay-2">We know the surrogacy process can feel overwhelming. This page walks you through every stage — timelines, costs, legal protection, and what to expect as an international family in California.</p>
-      <p class="fade-up delay-3" style="font-size:15px; color:var(--ink-3); margin-top:10px; line-height:1.7;">我们深知代孕过程可能令人不知所措。本页面将逐一说明每个阶段——时间线、费用、法律保障，以及作为国际家庭在加州的完整预期。</p>
+      <p class="en-text fade-up delay-2">We know the surrogacy process can feel overwhelming. This page walks you through every stage — timelines, costs, legal protection, and what to expect as an international family in California.</p>
+      <p class="zh-text fade-up delay-2">我们深知代孕过程可能令人不知所措。本页面逐一说明每个阶段——时间线、费用、法律保障，以及作为国际家庭在加州的完整预期。</p>
     </div>
   </section>
 
@@ -45,58 +48,65 @@
   <!-- ── Process timeline ──────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="label-rule reveal"><span>The six stages · 六个阶段</span></div>
+      <div class="label-rule reveal"><span><span class="en-text">The six stages</span><span class="zh-text">六个阶段</span></span></div>
       <div class="two-col" style="gap: 80px; align-items: start;">
         <div class="reveal reveal-d1">
-          <div class="eyebrow">Timeline · 时间线</div>
-          <h2 class="section-heading">18–24 months,<br>start to birth.
-            <span class="zh">从启动到分娩，18至24个月</span>
+          <div class="eyebrow"><span class="en-text">Timeline</span><span class="zh-text">时间线</span></div>
+          <h2 class="section-heading">
+            <span class="en-text">18–24 months,<br>start to birth.</span>
+            <span class="zh-text">从启动到分娩，18至24个月。</span>
           </h2>
-          <p class="section-sub">Every journey is different, but this is the typical arc. We set honest expectations at every stage so there are no surprises.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:12px; line-height:1.7;">每段旅程都有其独特性，但这是典型弧线。我们在每个阶段都诚实设定预期，不留惊喜。</p>
+          <p class="section-sub en-text">Every journey is different, but this is the typical arc. We set honest expectations at every stage so there are no surprises.</p>
+          <p class="section-sub zh-text">每段旅程各有不同，但这是典型弧线。我们在每个阶段诚实设定预期，不留惊喜。</p>
         </div>
         <div>
           <div class="timeline">
             <div class="timeline-step">
               <div class="step-num">01</div>
               <div class="step-content">
-                <h4>Initial consultation</h4>
-                <p>A confidential 30-minute call or video meeting. We listen to your situation, explain the California process, and answer every question — no obligation.</p>
+                <h4><span class="en-text">Initial consultation</span><span class="zh-text">初次咨询</span></h4>
+                <p class="en-text">A confidential 30-minute call or video meeting. We listen to your situation, explain the California process, and answer every question — no obligation.</p>
+                <p class="zh-text">30分钟保密视频或电话会议。我们聆听您的情况，解释加州流程，回答每一个问题——零承诺。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">02</div>
               <div class="step-content">
-                <h4>Application &amp; onboarding</h4>
-                <p>You complete a brief profile so we understand your family type, medical history, preferences, and timeline. Our team reviews and confirms the right next steps.</p>
+                <h4><span class="en-text">Application &amp; onboarding</span><span class="zh-text">申请与入职</span></h4>
+                <p class="en-text">You complete a brief profile so we understand your family type, medical history, preferences, and timeline. Our team reviews and confirms the right next steps.</p>
+                <p class="zh-text">您完成简短档案，我们了解您的家庭类型、病史、偏好与时间安排。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">03</div>
               <div class="step-content">
-                <h4>Surrogate matching</h4>
-                <p>We present fully screened surrogate profiles — medical records, psychological evaluations, background checks included. You meet candidates at your own pace until the right match feels right.</p>
+                <h4><span class="en-text">Surrogate matching</span><span class="zh-text">代孕妈妈配对</span></h4>
+                <p class="en-text">We present fully screened surrogate profiles — medical records, psychological evaluations, background checks included. You meet candidates at your own pace until the right match feels right.</p>
+                <p class="zh-text">我们提供经全面筛查的代孕妈妈档案——含病历、心理评估与背景调查。按您的节奏，直到找到合适的人选。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">04</div>
               <div class="step-content">
-                <h4>Legal contracts &amp; escrow</h4>
-                <p>Independent California-licensed attorneys represent each party. A contract is signed, escrow is established, and all compensation is managed transparently through a third-party trust account.</p>
+                <h4><span class="en-text">Legal contracts &amp; escrow</span><span class="zh-text">法律合同与托管</span></h4>
+                <p class="en-text">Independent California-licensed attorneys represent each party. A contract is signed, escrow is established, and all compensation is managed transparently through a third-party trust account.</p>
+                <p class="zh-text">独立的加州持牌律师代表双方。签署合同，建立托管账户，所有补偿通过第三方信托账户透明管理。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">05</div>
               <div class="step-content">
-                <h4>IVF transfer &amp; pregnancy</h4>
-                <p>We coordinate with your fertility clinic for embryo transfer. Once pregnancy is confirmed, we provide ongoing support — OB appointments, weekly check-ins, and a dedicated case manager.</p>
+                <h4><span class="en-text">IVF transfer &amp; pregnancy</span><span class="zh-text">IVF移植与妊娠</span></h4>
+                <p class="en-text">We coordinate with your fertility clinic for embryo transfer. Once pregnancy is confirmed, we provide ongoing support — OB appointments, weekly check-ins, and a dedicated case manager.</p>
+                <p class="zh-text">我们与您的生殖诊所协调胚胎移植。确认妊娠后，提供持续支持——产检陪同、每周回访及专属案例经理。</p>
               </div>
             </div>
             <div class="timeline-step" style="border-bottom: none;">
               <div class="step-num">06</div>
               <div class="step-content">
-                <h4>Birth &amp; legal parentage</h4>
-                <p>California's pre-birth order ensures your names appear on the birth certificate. You are recognized as legal parents before delivery — no adoption, no court battle.</p>
+                <h4><span class="en-text">Birth &amp; legal parentage</span><span class="zh-text">分娩与法定亲权</span></h4>
+                <p class="en-text">California's pre-birth order ensures your names appear on the birth certificate. You are recognized as legal parents before delivery — no adoption, no court battle.</p>
+                <p class="zh-text">加州出生前法令确保您的姓名出现在出生证明上。在分娩前即认定为法定父母——无需收养，无需诉讼。</p>
               </div>
             </div>
           </div>
@@ -110,56 +120,65 @@
   <!-- ── Costs ─────────────────────────────────────────────── -->
   <section class="section section--cream-2">
     <div class="container">
-      <div class="label-rule"><span>Understanding costs</span></div>
+      <div class="label-rule"><span><span class="en-text">Understanding costs</span><span class="zh-text">了解费用</span></span></div>
       <div class="two-col">
         <div>
-          <div class="eyebrow">Fee ranges · 费用范围</div>
-          <h2 class="section-heading">Transparent from<br>the first conversation.
-            <span class="zh">从第一次对话起，完全透明</span>
+          <div class="eyebrow"><span class="en-text">Fee ranges</span><span class="zh-text">费用范围</span></div>
+          <h2 class="section-heading">
+            <span class="en-text">Transparent from<br>the first conversation.</span>
+            <span class="zh-text">从第一次对话起，完全透明。</span>
           </h2>
-          <p class="section-sub">Surrogacy in California is a significant commitment. We provide a complete, itemized estimate during your initial consultation — so you can plan with confidence from day one.</p>
-          <p style="font-size: 15px; color: var(--ink-3); margin-top: 24px; line-height: 1.7;">Figures below represent typical ranges for a full-service California gestational surrogacy. Your actual costs are confirmed in writing before any agreement is signed.</p>
+          <p class="section-sub en-text">Surrogacy in California is a significant commitment. We provide a complete, itemized estimate during your initial consultation — so you can plan with confidence from day one.</p>
+          <p class="section-sub zh-text">代孕在加州是重大承诺。我们在初次咨询时提供完整的逐项报价——让您从第一天起就能信心十足地规划。</p>
+          <p class="en-text" style="font-size: 15px; color: var(--ink-3); margin-top: 24px; line-height: 1.7;">Figures below represent typical ranges for a full-service California gestational surrogacy. Your actual costs are confirmed in writing before any agreement is signed.</p>
+          <p class="zh-text" style="font-size: 15px; color: var(--ink-3); margin-top: 24px; line-height: 1.7;">以下数字代表全服务加州妊娠代孕的典型范围。您的实际费用将在签署任何协议前以书面形式确认。</p>
           <div style="margin-top: 40px; padding: 28px 32px; background: var(--green); border-radius: 2px;">
-            <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,250,248,0.6); margin-bottom: 12px;">Typical total investment</div>
+            <div style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(250,250,248,0.6); margin-bottom: 12px;"><span class="en-text">Typical total investment</span><span class="zh-text">典型总投入</span></div>
             <div style="font-family: var(--font-serif); font-size: clamp(32px, 4vw, 44px); font-weight: 400; color: #fafaf8; line-height: 1.1;">$160,000 – $240,000</div>
-            <div style="font-size: 13px; color: rgba(250,250,248,0.65); margin-top: 10px; line-height: 1.6;">Inclusive of all items below.<br>Fertility clinic fees are separate — see note.</div>
+            <div style="font-size: 13px; color: rgba(250,250,248,0.65); margin-top: 10px; line-height: 1.6;">
+              <span class="en-text">Inclusive of all items below.<br>Fertility clinic fees are separate — see note.</span>
+              <span class="zh-text">包含以下所有项目。生殖诊所费用单独计算——见备注。</span>
+            </div>
           </div>
         </div>
         <div>
           <div class="info-list">
             <div class="info-item">
-              <span class="info-key">Agency service fee</span>
+              <span class="info-key"><span class="en-text">Agency service fee</span><span class="zh-text">代理服务费</span></span>
               <span class="info-val">$45,000 – $65,000</span>
             </div>
             <div class="info-item">
-              <span class="info-key">Surrogate base compensation</span>
+              <span class="info-key"><span class="en-text">Surrogate base compensation</span><span class="zh-text">代孕妈妈基础补偿</span></span>
               <span class="info-val">$55,000 – $80,000+</span>
             </div>
             <div class="info-item">
-              <span class="info-key">Surrogate benefits &amp; allowances</span>
+              <span class="info-key"><span class="en-text">Surrogate benefits &amp; allowances</span><span class="zh-text">代孕妈妈福利津贴</span></span>
               <span class="info-val">$20,000 – $35,000</span>
             </div>
             <div class="info-item">
-              <span class="info-key">Legal fees (both parties)</span>
+              <span class="info-key"><span class="en-text">Legal fees (both parties)</span><span class="zh-text">法律费用（双方）</span></span>
               <span class="info-val">$12,000 – $20,000</span>
             </div>
             <div class="info-item">
-              <span class="info-key">Psychological evaluation</span>
+              <span class="info-key"><span class="en-text">Psychological evaluation</span><span class="zh-text">心理评估</span></span>
               <span class="info-val">$3,000 – $5,000</span>
             </div>
             <div class="info-item">
-              <span class="info-key">Escrow account management</span>
+              <span class="info-key"><span class="en-text">Escrow account management</span><span class="zh-text">托管账户管理</span></span>
               <span class="info-val">$1,500 – $2,500</span>
             </div>
             <div class="info-item">
-              <span class="info-key">Medical insurance</span>
-              <span class="info-val">Assessed individually — disclosed upfront</span>
+              <span class="info-key"><span class="en-text">Medical insurance</span><span class="zh-text">医疗保险</span></span>
+              <span class="info-val"><span class="en-text">Assessed individually — disclosed upfront</span><span class="zh-text">个案评估，提前告知</span></span>
             </div>
           </div>
           <div style="margin-top: 24px; padding: 20px 24px; border: 1px solid var(--border); border-radius: 2px; background: var(--cream);">
-            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px;">Fertility clinic fees</div>
+            <div style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 8px;"><span class="en-text">Fertility clinic fees</span><span class="zh-text">生殖诊所费用</span></div>
             <div style="font-size: 15px; color: var(--ink); font-weight: 500;">$25,000 – $45,000</div>
-            <div style="font-size: 13px; color: var(--ink-3); margin-top: 6px; line-height: 1.6;">Billed directly by your clinic — not routed through Lumen. We provide referrals to Bay Area and Southern California IVF specialists.</div>
+            <div style="font-size: 13px; color: var(--ink-3); margin-top: 6px; line-height: 1.6;">
+              <span class="en-text">Billed directly by your clinic — not routed through Lumen. We provide referrals to Bay Area and Southern California IVF specialists.</span>
+              <span class="zh-text">由诊所直接开票，不经过Lumen。我们可为您推荐湾区及南加州顶级IVF专家。</span>
+            </div>
           </div>
         </div>
       </div>
@@ -171,28 +190,29 @@
   <!-- ── International parents ─────────────────────────────── -->
   <section class="section section--green">
     <div class="container">
-      <div class="eyebrow reveal">International families · 国际家庭</div>
+      <div class="eyebrow reveal"><span class="en-text">International families</span><span class="zh-text">国际家庭</span></div>
       <div class="two-col">
         <div class="reveal reveal-d1">
-          <h2 class="section-heading">You don't need to live in the U.S. to build your family here.
-            <span class="zh">无需居住在美国，也可在此建立家庭</span>
+          <h2 class="section-heading">
+            <span class="en-text">You don't need to live in the U.S. to build your family here.</span>
+            <span class="zh-text">无需居住在美国，也可在此建立家庭。</span>
           </h2>
-          <p class="section-sub">Lumen has extensive experience guiding families from mainland China, Taiwan, Hong Kong, Singapore, and other countries through California surrogacy. We provide Mandarin-language support throughout.</p>
-          <p style="font-size:13px; color:rgba(250,250,248,0.45); margin-top:14px; line-height:1.7;">Lumen 拥有丰富经验，为来自中国大陆、台湾、香港、新加坡等地的家庭提供全程普通话服务。</p>
+          <p class="section-sub en-text">Lumen has extensive experience guiding families from mainland China, Taiwan, Hong Kong, Singapore, and other countries through California surrogacy. We provide Mandarin-language support throughout.</p>
+          <p class="section-sub zh-text">Lumen 拥有丰富经验，为来自中国大陆、台湾、香港、新加坡等地的家庭提供全程普通话服务。</p>
         </div>
         <div>
           <ul class="checklist" style="margin-top: 8px;">
-            <li style="color: rgba(250,250,248,0.85);">California's pre-birth order is valid regardless of parents' nationality or country of residence.</li>
-            <li style="color: rgba(250,250,248,0.85);">Your child will be a U.S. citizen by birth and receive a U.S. passport.</li>
-            <li style="color: rgba(250,250,248,0.85);">We coordinate virtually — most of the process requires only 1–2 trips to California.</li>
-            <li style="color: rgba(250,250,248,0.85);">We work with immigration attorneys experienced in international birth planning.</li>
-            <li style="color: rgba(250,250,248,0.85);">All documents provided in English and Chinese.</li>
-            <li style="color: rgba(250,250,248,0.85);">WeChat communication available for day-to-day updates.</li>
+            <li style="color: rgba(250,250,248,0.85);"><span class="en-text">California's pre-birth order is valid regardless of parents' nationality or country of residence.</span><span class="zh-text">加州出生前法令不受父母国籍或居住地限制。</span></li>
+            <li style="color: rgba(250,250,248,0.85);"><span class="en-text">Your child will be a U.S. citizen by birth and receive a U.S. passport.</span><span class="zh-text">您的孩子将以出生取得美国国籍，并获得美国护照。</span></li>
+            <li style="color: rgba(250,250,248,0.85);"><span class="en-text">We coordinate virtually — most of the process requires only 1–2 trips to California.</span><span class="zh-text">我们以远程方式协调——大多数流程仅需来加州1至2次。</span></li>
+            <li style="color: rgba(250,250,248,0.85);"><span class="en-text">We work with immigration attorneys experienced in international birth planning.</span><span class="zh-text">我们与经验丰富的国际出生规划移民律师合作。</span></li>
+            <li style="color: rgba(250,250,248,0.85);"><span class="en-text">All documents provided in English and Chinese.</span><span class="zh-text">所有文件提供中英双语版本。</span></li>
+            <li style="color: rgba(250,250,248,0.85);"><span class="en-text">WeChat communication available for day-to-day updates.</span><span class="zh-text">微信全程沟通，随时更新进展。</span></li>
           </ul>
           <div class="badge-row" style="margin-top: 36px;">
-            <span class="badge-chip" style="color: rgba(250,250,248,0.7); border-color: rgba(250,250,248,0.3);">Mandarin Support</span>
-            <span class="badge-chip" style="color: rgba(250,250,248,0.7); border-color: rgba(250,250,248,0.3);">U.S. Citizenship</span>
-            <span class="badge-chip" style="color: rgba(250,250,248,0.7); border-color: rgba(250,250,248,0.3);">Virtual-First Process</span>
+            <span class="badge-chip" style="color: rgba(250,250,248,0.7); border-color: rgba(250,250,248,0.3);"><span class="en-text">Mandarin Support</span><span class="zh-text">普通话支持</span></span>
+            <span class="badge-chip" style="color: rgba(250,250,248,0.7); border-color: rgba(250,250,248,0.3);"><span class="en-text">U.S. Citizenship</span><span class="zh-text">美国国籍</span></span>
+            <span class="badge-chip" style="color: rgba(250,250,248,0.7); border-color: rgba(250,250,248,0.3);"><span class="en-text">Virtual-First Process</span><span class="zh-text">远程优先流程</span></span>
           </div>
         </div>
       </div>
@@ -204,77 +224,91 @@
   <!-- ── FAQ ───────────────────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="label-rule"><span>Frequently asked questions</span></div>
+      <div class="label-rule"><span><span class="en-text">Frequently asked questions</span><span class="zh-text">常见问题</span></span></div>
       <div style="max-width: 780px;">
-        <div class="eyebrow mb-32">What intended parents ask most</div>
+        <div class="eyebrow mb-32"><span class="en-text">What intended parents ask most</span><span class="zh-text">委托父母最常问的问题</span></div>
 
         <div class="faq-item open">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            Do we need to use a California fertility clinic?
+          <button class="faq-question">
+            <span class="en-text">Do we need to use a California fertility clinic?</span>
+            <span class="zh-text">我们需要使用加州的生殖诊所吗？</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            No. Many intended parents use their own clinic in their home country to create embryos, which are then shipped to California for transfer. We coordinate with clinics globally and have established relationships with top IVF centers in the Bay Area and Los Angeles.
+            <p class="en-text">No. Many intended parents use their own clinic in their home country to create embryos, which are then shipped to California for transfer. We coordinate with clinics globally and have established relationships with top IVF centers in the Bay Area and Los Angeles.</p>
+            <p class="zh-text">不需要。许多委托父母在本国诊所创建胚胎后运送至加州进行移植。我们与全球诊所协调，并与湾区及洛杉矶顶级IVF中心建立了合作关系。</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            What if the surrogate changes her mind?
+          <button class="faq-question">
+            <span class="en-text">What if the surrogate changes her mind?</span>
+            <span class="zh-text">如果代孕妈妈改变主意怎么办？</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            In California, gestational surrogates have no legal claim to the child. Because the baby is not genetically related to the surrogate, and because a pre-birth order is issued by the court before delivery, the intended parents are the legal parents from the moment of birth. California law is designed to protect all parties — including the surrogate.
+            <p class="en-text">In California, gestational surrogates have no legal claim to the child. Because the baby is not genetically related to the surrogate, and because a pre-birth order is issued by the court before delivery, the intended parents are the legal parents from the moment of birth. California law is designed to protect all parties — including the surrogate.</p>
+            <p class="zh-text">在加州，妊娠代孕妈妈对孩子没有法律主张权。因为孩子与代孕妈妈无基因关系，且法院在分娩前即发出出生前法令，委托父母自出生起即为法定父母。加州法律旨在保护各方——包括代孕妈妈。</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            How long does matching typically take?
+          <button class="faq-question">
+            <span class="en-text">How long does matching typically take?</span>
+            <span class="zh-text">配对通常需要多长时间？</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            Most intended parents are matched within 2–6 months of completing their application. Timeline varies based on family preferences, surrogate availability, and how quickly both parties feel comfortable moving forward. We never pressure a match — the right fit matters more than speed.
+            <p class="en-text">Most intended parents are matched within 2–6 months of completing their application. Timeline varies based on family preferences, surrogate availability, and how quickly both parties feel comfortable moving forward. We never pressure a match — the right fit matters more than speed.</p>
+            <p class="zh-text">大多数委托父母在完成申请后2至6个月内完成配对。时间因家庭偏好、代孕妈妈档期及双方舒适度而异。我们从不催促配对——合适比速度更重要。</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            What does the agency fee cover?
+          <button class="faq-question">
+            <span class="en-text">What does the agency fee cover?</span>
+            <span class="zh-text">代理费包含哪些服务？</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            Our agency fee ($45,000–$65,000) covers the full scope of boutique case management: surrogate recruitment, multi-stage screening, matching facilitation, dedicated case manager from contract through birth, coordination with legal counsel, escrow oversight, clinical liaison, OB appointment support, and 24/7 access throughout the pregnancy. We are your single point of contact for every part of the journey — not a coordinator who hands you off.
+            <p class="en-text">Our agency fee ($45,000–$65,000) covers the full scope of boutique case management: surrogate recruitment, multi-stage screening, matching facilitation, dedicated case manager from contract through birth, coordination with legal counsel, escrow oversight, clinical liaison, OB appointment support, and 24/7 access throughout the pregnancy. We are your single point of contact for every part of the journey — not a coordinator who hands you off.</p>
+            <p class="zh-text">我们的代理费（$45,000–$65,000）涵盖精品案例管理的全部范围：代孕妈妈招募、多阶段筛查、配对协调、从合同签署到分娩的专属案例经理、法律协调、托管监管、临床联络、产检支持及全孕期24/7服务。我们是您整个旅程的唯一联络人。</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            Can single parents or same-sex couples pursue surrogacy in California?
+          <button class="faq-question">
+            <span class="en-text">Can single parents or same-sex couples pursue surrogacy in California?</span>
+            <span class="zh-text">单亲或同性伴侣可以在加州进行代孕吗？</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            Yes. California law protects all intended parent configurations equally — including single parents by choice, same-sex male couples, and same-sex female couples. Pre-birth orders are available regardless of marital status or gender.
+            <p class="en-text">Yes. California law protects all intended parent configurations equally — including single parents by choice, same-sex male couples, and same-sex female couples. Pre-birth orders are available regardless of marital status or gender.</p>
+            <p class="zh-text">可以。加州法律对所有委托父母构成均给予平等保护——包括单身父母、同性男性伴侣及同性女性伴侣。无论婚姻状况或性别，均可申请出生前法令。</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            Do we need to be physically present in California?
+          <button class="faq-question">
+            <span class="en-text">Do we need to be physically present in California?</span>
+            <span class="zh-text">我们需要亲自到加州吗？</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            Most of the process can be handled remotely. You will typically need to be in California for the embryo transfer (optional but encouraged) and for the birth. Some intended parents choose to be present for additional appointments — that is entirely your preference.
+            <p class="en-text">Most of the process can be handled remotely. You will typically need to be in California for the embryo transfer (optional but encouraged) and for the birth. Some intended parents choose to be present for additional appointments — that is entirely your preference.</p>
+            <p class="zh-text">大多数流程可以远程完成。您通常需要到加州进行胚胎移植（可选但建议）及分娩。部分委托父母选择出席更多检查——完全根据您的意愿。</p>
           </div>
         </div>
 
         <div class="faq-item">
-          <button class="faq-question" onclick="toggleFaq(this)">
-            Is the process confidential?
+          <button class="faq-question">
+            <span class="en-text">Is the process confidential?</span>
+            <span class="zh-text">整个过程保密吗？</span>
             <span class="icon">+</span>
           </button>
           <div class="faq-answer">
-            Confidentiality is central to how we operate. All consultations are private. Surrogate and intended parent profiles are only shared after both parties provide consent. We do not share client information with any third parties without explicit permission.
+            <p class="en-text">Confidentiality is central to how we operate. All consultations are private. Surrogate and intended parent profiles are only shared after both parties provide consent. We do not share client information with any third parties without explicit permission.</p>
+            <p class="zh-text">保密是我们运营的核心。所有咨询均为私密。代孕妈妈和委托父母的档案仅在双方同意后共享。未经明确许可，我们不会与任何第三方共享客户信息。</p>
           </div>
         </div>
 
@@ -285,11 +319,16 @@
   <!-- ── CTA band ──────────────────────────────────────────── -->
   <div class="callout-band">
     <div class="container text-center">
-      <h2 class="reveal">Have more questions?
-        <span class="zh">还有更多问题？</span>
+      <h2 class="reveal">
+        <span class="en-text">Have more questions?</span>
+        <span class="zh-text">还有更多问题？</span>
       </h2>
-      <p class="reveal reveal-d1">Book a confidential call. There's no obligation — just honest answers. · 预约保密咨询，零压力，只有真实的解答。</p>
-      <a href="contact.html" class="btn btn-outline-light reveal reveal-d2">Book a confidential call · 预约保密咨询</a>
+      <p class="reveal reveal-d1 en-text">Book a confidential call. There's no obligation — just honest answers.</p>
+      <p class="reveal reveal-d1 zh-text">预约保密咨询，零压力，只有真实的解答。</p>
+      <a href="contact.html" class="btn btn-outline-light reveal reveal-d2">
+        <span class="en-text">Book a confidential call</span>
+        <span class="zh-text">预约保密咨询</span>
+      </a>
     </div>
   </div>
 

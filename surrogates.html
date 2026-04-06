@@ -11,30 +11,35 @@
 <body class="page-body">
 
   <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav class="nav">
+  <nav class="nav" role="navigation">
     <div class="container">
       <a href="index.html" class="nav-brand">Lumen</a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="intended-parents.html">Intended Parents</a></li>
-        <li><a href="surrogates.html" class="active">Surrogates</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="nav-cta">Book a Call · 预约咨询</a></li>
+        <li><a href="index.html"><span class="en-text">Home</span><span class="zh-text">首页</span></a></li>
+        <li><a href="intended-parents.html"><span class="en-text">Intended Parents</span><span class="zh-text">委托父母</span></a></li>
+        <li><a href="surrogates.html" class="active"><span class="en-text">Surrogates</span><span class="zh-text">代孕妈妈</span></a></li>
+        <li><a href="about.html"><span class="en-text">About</span><span class="zh-text">关于我们</span></a></li>
+        <li><a href="contact.html" class="nav-cta"><span class="en-text">Book a Call</span><span class="zh-text">预约咨询</span></a></li>
       </ul>
+      <div class="nav-right">
+        <button class="lang-toggle" onclick="toggleLang()">中文</button>
+        <button class="nav-toggle" aria-label="Toggle menu" onclick="this.classList.toggle('open'); document.getElementById('nav-links').classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ── Page hero ─────────────────────────────────────────── -->
   <section class="page-hero">
     <div class="container">
-      <div class="eyebrow fade-up">For Surrogates · 代孕妈妈</div>
-      <h1 class="fade-up delay-1">Give the gift<br>of family.
-        <span class="zh">给予一个家庭最珍贵的礼物</span>
+      <div class="eyebrow fade-up"><span class="en-text">For Surrogates</span><span class="zh-text">代孕妈妈</span></div>
+      <h1 class="fade-up delay-1">
+        <span class="en-text">Give the gift<br>of family.</span>
+        <span class="zh-text">给予一个家庭最珍贵的礼物。</span>
       </h1>
-      <p class="fade-up delay-2">Surrogacy is one of the most meaningful decisions a person can make. At Lumen, we match you with families who are thoroughly vetted, and support you through every step of the journey.</p>
+      <p class="en-text fade-up delay-2">Surrogacy is one of the most meaningful decisions a person can make. At Lumen, we match you with families who are thoroughly vetted, and support you through every step of the journey.</p>
+      <p class="zh-text fade-up delay-2">代孕是一个人能做出的最有意义的决定之一。在Lumen，我们为您匹配经过严格筛查的家庭，并在旅程的每一步给予支持。</p>
     </div>
   </section>
 
@@ -43,29 +48,33 @@
   <!-- ── Eligibility ───────────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="label-rule reveal"><span>Eligibility requirements · 资格要求</span></div>
+      <div class="label-rule reveal"><span><span class="en-text">Eligibility requirements</span><span class="zh-text">资格要求</span></span></div>
       <div class="two-col">
         <div class="reveal reveal-d1">
-          <div class="eyebrow">Who can apply · 谁可以申请</div>
-          <h2 class="section-heading">Basic requirements<br>for gestational surrogates.
-            <span class="zh">妊娠代孕基本资格要求</span>
+          <div class="eyebrow"><span class="en-text">Who can apply</span><span class="zh-text">谁可以申请</span></div>
+          <h2 class="section-heading">
+            <span class="en-text">Basic requirements<br>for gestational surrogates.</span>
+            <span class="zh-text">妊娠代孕基本资格要求。</span>
           </h2>
-          <p class="section-sub">These are California's standard screening criteria, set to protect both surrogate and child. If you meet most but not all, still reach out — we can discuss your specific situation.</p>
-          <p style="font-size:13px; color:var(--ink-3); margin-top:12px; line-height:1.7;">这些是加州标准筛查条件，旨在保护代孕妈妈与孩子双方。若您大部分符合但非全部，欢迎联系我们，共同探讨您的具体情况。</p>
-          <a href="contact.html" class="btn btn-outline mt-32" style="display: inline-flex;">Apply to become a surrogate · 申请成为代孕妈妈</a>
+          <p class="section-sub en-text">These are California's standard screening criteria, set to protect both surrogate and child. If you meet most but not all, still reach out — we can discuss your specific situation.</p>
+          <p class="section-sub zh-text">这些是加州的标准筛查条件，旨在保护代孕妈妈与孩子双方。若您大部分符合但非全部，仍欢迎联系我们——我们可以探讨您的具体情况。</p>
+          <a href="contact.html" class="btn btn-outline mt-32" style="display: inline-flex;">
+            <span class="en-text">Apply to become a surrogate</span>
+            <span class="zh-text">申请成为代孕妈妈</span>
+          </a>
         </div>
         <div>
           <ul class="checklist">
-            <li>Between 21 and 40 years of age</li>
-            <li>Have previously given birth to at least one child you are parenting</li>
-            <li>Healthy BMI (typically 18–32, varies by clinic)</li>
-            <li>Non-smoker; no illegal drug use in the past 12 months</li>
-            <li>No major uncontrolled health conditions</li>
-            <li>U.S. resident with stable living situation</li>
-            <li>No history of significant mental health conditions (cleared through psychological evaluation)</li>
-            <li>Willing to carry for intended parents regardless of family type</li>
-            <li>Not currently receiving government financial assistance</li>
-            <li>Have a reliable support system (partner, family, or friends)</li>
+            <li><span class="en-text">Between 21 and 40 years of age</span><span class="zh-text">年龄在21至40岁之间</span></li>
+            <li><span class="en-text">Have previously given birth to at least one child you are parenting</span><span class="zh-text">曾生育至少一名由您抚养的孩子</span></li>
+            <li><span class="en-text">Healthy BMI (typically 18–32, varies by clinic)</span><span class="zh-text">健康BMI（通常18至32，因诊所而异）</span></li>
+            <li><span class="en-text">Non-smoker; no illegal drug use in the past 12 months</span><span class="zh-text">非吸烟者；过去12个月内无非法药物使用</span></li>
+            <li><span class="en-text">No major uncontrolled health conditions</span><span class="zh-text">无重大未控制的健康问题</span></li>
+            <li><span class="en-text">U.S. resident with stable living situation</span><span class="zh-text">美国居民，生活状况稳定</span></li>
+            <li><span class="en-text">No history of significant mental health conditions (cleared through psychological evaluation)</span><span class="zh-text">无重大心理健康病史（通过心理评估清除）</span></li>
+            <li><span class="en-text">Willing to carry for intended parents regardless of family type</span><span class="zh-text">愿意为任何家庭类型的委托父母代孕</span></li>
+            <li><span class="en-text">Not currently receiving government financial assistance</span><span class="zh-text">目前未领取政府财务援助</span></li>
+            <li><span class="en-text">Have a reliable support system (partner, family, or friends)</span><span class="zh-text">拥有可靠的支持系统（伴侣、家人或朋友）</span></li>
           </ul>
         </div>
       </div>
@@ -77,61 +86,64 @@
   <!-- ── Compensation ──────────────────────────────────────── -->
   <section class="section section--cream-2">
     <div class="container">
-      <div class="label-rule reveal"><span>Compensation · 薪酬待遇</span></div>
+      <div class="label-rule reveal"><span><span class="en-text">Compensation</span><span class="zh-text">薪酬待遇</span></span></div>
       <div class="two-col">
         <div class="reveal reveal-d1">
-          <div class="eyebrow">What you receive · 您将获得</div>
-          <h2 class="section-heading">Compensation that<br>reflects your contribution.
-            <span class="zh">薪酬与您的付出相称</span>
+          <div class="eyebrow"><span class="en-text">What you receive</span><span class="zh-text">您将获得</span></div>
+          <h2 class="section-heading">
+            <span class="en-text">Compensation that<br>reflects your contribution.</span>
+            <span class="zh-text">薪酬与您的付出相称。</span>
           </h2>
-          <p style="font-size: 16px; color: var(--ink-3); line-height: 1.75; margin-bottom: 24px;">California surrogates receive among the highest compensation in the country. All payments are made through a third-party escrow account on a predictable schedule.</p>
-          <p style="font-size: 15px; color: var(--ink-3); line-height: 1.75;">Surrogacy compensation is generally not taxable income in the U.S. We recommend consulting a tax advisor, and can provide referrals.</p>
+          <p class="en-text" style="font-size: 16px; color: var(--ink-3); line-height: 1.75; margin-bottom: 24px;">California surrogates receive among the highest compensation in the country. All payments are made through a third-party escrow account on a predictable schedule.</p>
+          <p class="zh-text" style="font-size: 16px; color: var(--ink-3); line-height: 1.75; margin-bottom: 24px;">加州代孕妈妈获得全美最高的薪酬之一。所有款项通过第三方托管账户按计划支付。</p>
+          <p class="en-text" style="font-size: 15px; color: var(--ink-3); line-height: 1.75;">Surrogacy compensation is generally not taxable income in the U.S. We recommend consulting a tax advisor, and can provide referrals.</p>
+          <p class="zh-text" style="font-size: 15px; color: var(--ink-3); line-height: 1.75;">代孕补偿在美国通常不属于应税收入。我们建议咨询税务顾问，并可提供推荐。</p>
           <div class="badge-row mt-32">
-            <span class="badge-chip">Escrow protected</span>
-            <span class="badge-chip">Monthly payments</span>
-            <span class="badge-chip">Fully insured</span>
+            <span class="badge-chip"><span class="en-text">Escrow protected</span><span class="zh-text">托管保护</span></span>
+            <span class="badge-chip"><span class="en-text">Monthly payments</span><span class="zh-text">按月支付</span></span>
+            <span class="badge-chip"><span class="en-text">Fully insured</span><span class="zh-text">全额保险</span></span>
           </div>
         </div>
         <div>
           <div class="comp-block">
             <div class="comp-amount">$50K–$70K+</div>
-            <div class="comp-label">Base compensation range (first-time surrogates)</div>
+            <div class="comp-label"><span class="en-text">Base compensation range (first-time surrogates)</span><span class="zh-text">基础薪酬范围（首次代孕）</span></div>
             <div class="comp-items">
               <div class="comp-item">
-                <span class="comp-item-key">Base compensation</span>
+                <span class="comp-item-key"><span class="en-text">Base compensation</span><span class="zh-text">基础补偿</span></span>
                 <span class="comp-item-val">$50,000 – $70,000</span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">Monthly allowance</span>
+                <span class="comp-item-key"><span class="en-text">Monthly allowance</span><span class="zh-text">月度津贴</span></span>
                 <span class="comp-item-val">$250 / month</span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">Maternity clothing</span>
+                <span class="comp-item-key"><span class="en-text">Maternity clothing</span><span class="zh-text">孕期服装</span></span>
                 <span class="comp-item-val">$1,000</span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">Transfer fee</span>
+                <span class="comp-item-key"><span class="en-text">Transfer fee</span><span class="zh-text">移植费</span></span>
                 <span class="comp-item-val">$1,000</span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">Mock cycle fee</span>
+                <span class="comp-item-key"><span class="en-text">Mock cycle fee</span><span class="zh-text">模拟周期费</span></span>
                 <span class="comp-item-val">$500</span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">Invasive procedure fee</span>
-                <span class="comp-item-val">$500 per occurrence</span>
+                <span class="comp-item-key"><span class="en-text">Invasive procedure fee</span><span class="zh-text">侵入性手术费</span></span>
+                <span class="comp-item-val"><span class="en-text">$500 per occurrence</span><span class="zh-text">$500/次</span></span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">C-section fee (if required)</span>
+                <span class="comp-item-key"><span class="en-text">C-section fee (if required)</span><span class="zh-text">剖腹产费（如需）</span></span>
                 <span class="comp-item-val">$3,000 – $5,000</span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">All medical expenses</span>
-                <span class="comp-item-val">100% covered</span>
+                <span class="comp-item-key"><span class="en-text">All medical expenses</span><span class="zh-text">所有医疗费用</span></span>
+                <span class="comp-item-val"><span class="en-text">100% covered</span><span class="zh-text">100%覆盖</span></span>
               </div>
               <div class="comp-item">
-                <span class="comp-item-key">Life insurance policy</span>
-                <span class="comp-item-val">Provided</span>
+                <span class="comp-item-key"><span class="en-text">Life insurance policy</span><span class="zh-text">人寿保险</span></span>
+                <span class="comp-item-val"><span class="en-text">Provided</span><span class="zh-text">提供</span></span>
               </div>
             </div>
           </div>
@@ -145,55 +157,65 @@
   <!-- ── Surrogate process ──────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div class="label-rule"><span>From application to match</span></div>
+      <div class="label-rule"><span><span class="en-text">From application to match</span><span class="zh-text">从申请到配对</span></span></div>
       <div class="two-col" style="gap: 80px; align-items: start;">
         <div>
-          <div class="eyebrow">The process</div>
-          <h2 class="section-heading">What happens after you apply.</h2>
-          <p class="section-sub">We move at a pace that feels right to you. Our screening process is thorough because it protects everyone — including you.</p>
+          <div class="eyebrow"><span class="en-text">The process</span><span class="zh-text">流程</span></div>
+          <h2 class="section-heading">
+            <span class="en-text">What happens after you apply.</span>
+            <span class="zh-text">申请后会发生什么。</span>
+          </h2>
+          <p class="section-sub en-text">We move at a pace that feels right to you. Our screening process is thorough because it protects everyone — including you.</p>
+          <p class="section-sub zh-text">我们以适合您的节奏推进。我们的筛查流程严格，因为它保护每一方——包括您。</p>
         </div>
         <div>
           <div class="timeline">
             <div class="timeline-step">
               <div class="step-num">01</div>
               <div class="step-content">
-                <h4>Initial application</h4>
-                <p>Complete a brief online form with your health history, family situation, and motivations. Our team reviews every application personally.</p>
+                <h4><span class="en-text">Initial application</span><span class="zh-text">初始申请</span></h4>
+                <p class="en-text">Complete a brief online form with your health history, family situation, and motivations. Our team reviews every application personally.</p>
+                <p class="zh-text">填写简短在线表格，包含您的健康状况、家庭情况及动机。我们的团队亲自审阅每份申请。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">02</div>
               <div class="step-content">
-                <h4>Screening call</h4>
-                <p>A 30–45 minute call with our team to ask questions, understand the process, and ensure it's the right fit for your life right now.</p>
+                <h4><span class="en-text">Screening call</span><span class="zh-text">筛查通话</span></h4>
+                <p class="en-text">A 30–45 minute call with our team to ask questions, understand the process, and ensure it's the right fit for your life right now.</p>
+                <p class="zh-text">与我们团队进行30至45分钟的通话，提问、了解流程，确认这是否适合您现阶段的生活。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">03</div>
               <div class="step-content">
-                <h4>Medical &amp; psychological evaluation</h4>
-                <p>A full medical screening at your IVF clinic, plus a psychological evaluation with a licensed counselor experienced in third-party reproduction. All costs covered.</p>
+                <h4><span class="en-text">Medical &amp; psychological evaluation</span><span class="zh-text">医疗与心理评估</span></h4>
+                <p class="en-text">A full medical screening at your IVF clinic, plus a psychological evaluation with a licensed counselor experienced in third-party reproduction. All costs covered.</p>
+                <p class="zh-text">在您的IVF诊所进行全面医疗筛查，并与持牌、有第三方生殖经验的心理咨询师进行心理评估。所有费用由我们承担。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">04</div>
               <div class="step-content">
-                <h4>Profile creation &amp; matching</h4>
-                <p>We create your profile and begin presenting it to compatible intended parent families. You review profiles and decide who feels right — no pressure.</p>
+                <h4><span class="en-text">Profile creation &amp; matching</span><span class="zh-text">档案创建与配对</span></h4>
+                <p class="en-text">We create your profile and begin presenting it to compatible intended parent families. You review profiles and decide who feels right — no pressure.</p>
+                <p class="zh-text">我们为您创建档案并开始向匹配的委托父母家庭展示。您审阅档案并决定谁感觉合适——无压力。</p>
               </div>
             </div>
             <div class="timeline-step">
               <div class="step-num">05</div>
               <div class="step-content">
-                <h4>Legal contract</h4>
-                <p>An independent attorney represents you (at no cost to you) throughout the contract process. All terms are fully explained before you sign anything.</p>
+                <h4><span class="en-text">Legal contract</span><span class="zh-text">法律合同</span></h4>
+                <p class="en-text">An independent attorney represents you (at no cost to you) throughout the contract process. All terms are fully explained before you sign anything.</p>
+                <p class="zh-text">独立律师代表您（免费）参与全程合同流程。所有条款在您签署前均有完整说明。</p>
               </div>
             </div>
             <div class="timeline-step" style="border-bottom: none;">
               <div class="step-num">06</div>
               <div class="step-content">
-                <h4>Transfer &amp; pregnancy support</h4>
-                <p>Your dedicated case manager is available throughout the entire pregnancy. We're here for the clinical coordination, the emotional moments, and everything in between.</p>
+                <h4><span class="en-text">Transfer &amp; pregnancy support</span><span class="zh-text">移植与妊娠支持</span></h4>
+                <p class="en-text">Your dedicated case manager is available throughout the entire pregnancy. We're here for the clinical coordination, the emotional moments, and everything in between.</p>
+                <p class="zh-text">您的专属案例经理在整个妊娠期间全程陪伴。无论临床协调、情感时刻还是其他一切，我们都在这里。</p>
               </div>
             </div>
           </div>
@@ -205,13 +227,21 @@
   <!-- ── CTA band ──────────────────────────────────────────── -->
   <div class="callout-band">
     <div class="container text-center">
-      <h2 class="reveal">Ready to learn more?
-        <span class="zh">准备好了解更多了吗？</span>
+      <h2 class="reveal">
+        <span class="en-text">Ready to learn more?</span>
+        <span class="zh-text">准备好了解更多了吗？</span>
       </h2>
-      <p class="reveal reveal-d1">Apply today or book a call with our team — no commitment required. · 立即申请或预约通话，无任何承诺要求。</p>
+      <p class="reveal reveal-d1 en-text">Apply today or book a call with our team — no commitment required.</p>
+      <p class="reveal reveal-d1 zh-text">立即申请或预约与我们团队的通话——无任何承诺要求。</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="contact.html" class="btn btn-outline-light">Apply to become a surrogate</a>
-        <a href="contact.html" class="btn" style="background: rgba(250,250,248,0.12); color: var(--cream); border: 1px solid rgba(250,250,248,0.25);">Book a call first</a>
+        <a href="contact.html" class="btn btn-outline-light">
+          <span class="en-text">Apply to become a surrogate</span>
+          <span class="zh-text">申请成为代孕妈妈</span>
+        </a>
+        <a href="contact.html" class="btn" style="background: rgba(250,250,248,0.12); color: var(--cream); border: 1px solid rgba(250,250,248,0.25);">
+          <span class="en-text">Book a call first</span>
+          <span class="zh-text">先预约通话</span>
+        </a>
       </div>
     </div>
   </div>
